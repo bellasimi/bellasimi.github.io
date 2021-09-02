@@ -1,2 +1,2 @@
 # bellasimi.github.io
-개발에 대한 모든것
+  개발관련 블로그
