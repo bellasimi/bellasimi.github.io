@@ -1,4 +1,4 @@
-#intellij mysql 연동하는법 
+# intellij mysql 연동하는법 
 
 1. 상단 메뉴바 View - Tool Windows - Databse 
 2. 우측에 뜬 창에서 Database를 클릭
