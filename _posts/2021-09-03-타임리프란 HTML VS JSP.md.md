@@ -17,7 +17,7 @@
 * 웹어플리케이션 서버에서 작업을 수행하고 도출된 데이터를 웹페이지로 보내 클라이언트에게 응답한다.  
 
 # MVC패턴
-![MVC구조](https://user-images.githubusercontent.com/79133602/132099611-f58dc6fa-33cc-4894-9035-4f90afd24fd0.png)
+![image](https://user-images.githubusercontent.com/79133602/132099696-670a957c-4643-40f4-a61b-c9a8933dd7f1.png)
 
 # 참고
-https://eblo.tistory.com/57
+[1] : https://eblo.tistory.com/57
