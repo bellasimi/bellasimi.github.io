@@ -12,7 +12,9 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 😱😱
 
 한글 인코딩 부분자체가 저장이 안돼있더라구요.
-그럼 도대체 저 오타는 어디에 저장이 됐고 어떻게 복구를 시키나.
+그럼 도대체 저 오타는 어디에 저장이 됐고 어떻게 복구를 시키나. 
+밑에는 해결과정이 다 써져 있기에 
+결과만 보고 싶으신 분은 [해결법](#5.-사용자-appdata에-있는-jetbrain-폴더-삭제) 클릭해주세요!
 
 # 1. 재설치
 
@@ -40,81 +42,29 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 앞으로 해결을 해야될텐데... 일단 저 답변에 그렇게 했는데도 안되고 제 디렉토리 상태와 오류 메세지 오류가 발생한 원인에 대해 더 적어뒀는데 제발 해답을 알려주길 바랄 뿐입니다.
 
 
-```
-C:\Users\82107>cd C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\bin
+# 5. 사용자 AppData에 있는 JetBrain 폴더 삭제
+먼저 AppData를 보기 위해 탐색기의 보기 메뉴에서 숨긴항목 보기를 체크해줍니다.
 
-C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\bin>idea.bat
+![image](https://user-images.githubusercontent.com/79133602/133564367-a5514c14-4b9b-48ed-b5e3-e8d26510a58f.png)
 
-Start Failed
-Internal error. Please refer to https://jb.gg/ide/critical-startup-errors
+그다음 사용자 폴더로 들어가면 (보통 내PC -C - 사용자 -사용자명으로 들어가면된다.) 전에 안보이던 AppData가 보이는 걸 알 수 있죠!!
 
-java.nio.charset.IllegalCharsetNameException: UTF=8
-        at java.base/java.nio.charset.Charset.checkName(Charset.java:308)
-        at java.base/java.nio.charset.Charset.lookup2(Charset.java:482)
-        at java.base/java.nio.charset.Charset.lookup(Charset.java:462)
-        at java.base/java.nio.charset.Charset.defaultCharset(Charset.java:608)
-        at java.base/java.io.OutputStreamWriter.<init>(OutputStreamWriter.java:110)
-        at org.apache.log4j.WriterAppender.createWriter(WriterAppender.java:251)
-        at org.apache.log4j.ConsoleAppender.activateOptions(ConsoleAppender.java:141)
-        at org.apache.log4j.ConsoleAppender.<init>(ConsoleAppender.java:68)
-        at org.apache.log4j.ConsoleAppender.<init>(ConsoleAppender.java:57)
-        at com.intellij.idea.StartupUtil.configureLog4j(StartupUtil.java:630)
-        at com.intellij.idea.StartupUtil.start(StartupUtil.java:140)
-        at com.intellij.idea.Main.bootstrap(Main.java:123)
-        at com.intellij.idea.Main.main(Main.java:84)
+![image](https://user-images.githubusercontent.com/79133602/133564686-3744e500-c602-4086-a561-82a418149abe.png)
 
------
-Your JRE: 11.0.11+9-b1504.16 amd64 (JetBrains s.r.o.)
-C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\jbr
+해당 폴더 안엔 다음과 같은 폴더가 있는데 검색창에 JetBrains를 치거나 또는 
 
-Also, a UI exception occurred on an attempt to show the above message
-java.lang.InternalError: java.lang.reflect.InvocationTargetException
-        at java.desktop/sun.font.FontManagerFactory$1.run(FontManagerFactory.java:86)
-        at java.base/java.security.AccessController.doPrivileged(Native Method)
-        at java.desktop/sun.font.FontManagerFactory.getInstance(FontManagerFactory.java:74)
-        at java.desktop/java.awt.Font.getFont2D(Font.java:494)
-        at java.desktop/java.awt.Font$FontAccessImpl.getFont2D(Font.java:234)
-        at java.desktop/sun.font.FontUtilities.getFont2D(FontUtilities.java:186)
-        at java.desktop/sun.font.FontUtilities.fontSupportsDefaultEncoding(FontUtilities.java:369)
-        at java.desktop/com.sun.java.swing.plaf.windows.WindowsLookAndFeel$WindowsFontProperty.configureValue(WindowsLookAndFeel.java:2240)
-        at java.desktop/sun.swing.plaf.DesktopProperty.createValue(DesktopProperty.java:159)
-        at java.desktop/javax.swing.UIDefaults.getFromHashtable(UIDefaults.java:239)
-        at java.desktop/javax.swing.UIDefaults.get(UIDefaults.java:169)
-        at java.desktop/javax.swing.MultiUIDefaults.get(MultiUIDefaults.java:65)
-        at java.desktop/javax.swing.UIDefaults.getFont(UIDefaults.java:419)
-        at java.desktop/javax.swing.UIManager.getFont(UIManager.java:727)
-        at java.desktop/javax.swing.plaf.basic.BasicTextUI.installDefaults(BasicTextUI.java:317)
-        at java.desktop/javax.swing.plaf.basic.BasicTextUI.installUI(BasicTextUI.java:803)
-        at java.desktop/javax.swing.plaf.basic.BasicEditorPaneUI.installUI(BasicEditorPaneUI.java:90)
-        at java.desktop/javax.swing.plaf.basic.BasicTextPaneUI.installUI(BasicTextPaneUI.java:82)
-        at java.desktop/javax.swing.JComponent.setUI(JComponent.java:688)
-        at java.desktop/javax.swing.text.JTextComponent.setUI(JTextComponent.java:342)
-        at java.desktop/javax.swing.text.JTextComponent.updateUI(JTextComponent.java:352)
-        at java.desktop/javax.swing.text.JTextComponent.<init>(JTextComponent.java:326)
-        at java.desktop/javax.swing.JEditorPane.<init>(JEditorPane.java:198)
-        at java.desktop/javax.swing.JTextPane.<init>(JTextPane.java:87)
-        at com.intellij.idea.Main.showMessage(Main.java:264)
-        at com.intellij.idea.Main.showMessage(Main.java:219)
-        at com.intellij.idea.Main.main(Main.java:87)
-Caused by: java.lang.reflect.InvocationTargetException
-        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-        at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-        at java.desktop/sun.font.FontManagerFactory$1.run(FontManagerFactory.java:84)
-        ... 26 more
-Caused by: java.nio.charset.IllegalCharsetNameException: UTF=8
-        at java.base/java.nio.charset.Charset.checkName(Charset.java:308)
-        at java.base/java.nio.charset.Charset.lookup2(Charset.java:482)
-        at java.base/java.nio.charset.Charset.lookup(Charset.java:462)
-        at java.base/java.nio.charset.Charset.defaultCharset(Charset.java:608)
-        at java.desktop/sun.awt.FontConfiguration.setEncoding(FontConfiguration.java:142)
-        at java.desktop/sun.awt.FontConfiguration.<init>(FontConfiguration.java:94)
-        at java.desktop/sun.awt.windows.WFontConfiguration.<init>(WFontConfiguration.java:41)
-        at java.desktop/sun.awt.Win32FontManager.createFontConfiguration(Win32FontManager.java:179)
-        at java.desktop/sun.font.SunFontManager$2.run(SunFontManager.java:491)
-        at java.base/java.security.AccessController.doPrivileged(Native Method)
-        at java.desktop/sun.font.SunFontManager.<init>(SunFontManager.java:437)
-        at java.desktop/sun.awt.Win32FontManager.<init>(Win32FontManager.java:87)
-        ... 31 more
-```
+![image](https://user-images.githubusercontent.com/79133602/133563553-38665ee6-da33-4616-94a1-c7c53c876214.png)
+
+그냥 Roaming, Local 폴더에 들어가서 JetBrains 폴더를 찾아 삭제해주면됩니다. 
+
+![image](https://user-images.githubusercontent.com/79133602/133563726-ac50d7ca-d151-4b95-b4ac-ff3d99903b12.png)
+
+그다음 IntelliJ를 삭제해 주고 재설치하면
+
+![image](https://user-images.githubusercontent.com/79133602/133561844-4177b42c-a2c4-407f-bc57-90d2ced717c4.png)
+
+다시 정상작동하는 것을 볼수 있습니다!!😆
+
+
+
+[참조] (https://intellij-support.jetbrains.com/hc/en-us/articles/360007568559)
