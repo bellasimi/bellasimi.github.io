@@ -8,9 +8,13 @@
 
 ![image](https://user-images.githubusercontent.com/79133602/134350253-370a0dbe-3b18-41d2-bb0a-efe78f45fe30.png)
 
+<br/><br/><br/>
+
+
 # 해결
 
 기존의 값을 지우고 넣거나 중복값을 새로운 값으로 바꿔줍니다. 
+<br/><br/><br/>
 
 # 에러 메세지 
 
