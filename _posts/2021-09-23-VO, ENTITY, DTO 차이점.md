@@ -34,6 +34,8 @@
 
 * Value Object: 객체  
 
+* Read-Only라는 점에서 DTO와 차이가 있다. 
+
 * equals(),hashcode() 오버라이딩  
 
 * 필드의 모든 값들이 VO 객체마다 값이 같아야 똑같은 객체로 판별  
