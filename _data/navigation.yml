@@ -1,12 +1,12 @@
 # main links
 main:
-  - title: "Main"
+  - title: "first post"
     url: https://bellasimi.github.io/firstpost/
-  - title: "TEST1"
-     url: https://bellasimi.github.io/VO,-ENTITY,-DTO-%EC%B0%A8%EC%9D%B4%EC%A0%90/
-   - title: "TEST2"
-     url: https://bellasimi.github.io/MySql-%EC%A4%91%EB%B3%B5(Duplicate)%ED%82%A4-%EC%97%90%EB%9F%AC/
-   - title: "TEST3"
-     url: https://bellasimi.github.io/intellij-mysql%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0/
-   - title: "TEST4"
-     url: https://bellasimi.github.io/Javascript-%EB%B3%80%EC%88%98-var,let,const%EC%B0%A8%EC%9D%B4/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
