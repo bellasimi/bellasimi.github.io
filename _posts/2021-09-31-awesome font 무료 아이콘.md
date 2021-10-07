@@ -6,7 +6,8 @@
 
 <br/>
 # 사용방법
-<br/><br/>
+
+
 먼저 [홈페이지](https://fontawesome.com/)로 이동해주세요.
 
 ![image](https://user-images.githubusercontent.com/79133602/135276974-9db72ab8-3595-4c83-8126-7f3837607339.png)

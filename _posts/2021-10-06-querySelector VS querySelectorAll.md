@@ -1,5 +1,5 @@
-
-[querySelectorAll사용법 보기](#querySelectorAll)
+<br/><br/>
+[querySelectorAll사용법 보기](#queryselectorall)
 
 class는 id와 달리 중복이 가능하죠. 그러다보니 같은 class값을 갖는 여러개의 요소를 선택해줘야되는 경우가 있습니다. 저는 오늘 아래와 같이 admin_menu class li를 2개 만들고 버튼이 클릭될시 active를 class 값에 추가해 css 적용하려합니다. 
 
@@ -8,7 +8,8 @@ class는 id와 달리 중복이 가능하죠. 그러다보니 같은 class값을
 아직 버튼에 addEventListner해주지 않은 상태입니다.
 
 ![image](https://user-images.githubusercontent.com/79133602/136019791-545a1a9c-11c8-4602-a721-364b73de1ff8.png)
-<br/><br/>
+<br/><br/><br/>
+
 # querySelector
 
 
@@ -28,7 +29,7 @@ class는 id와 달리 중복이 가능하죠. 그러다보니 같은 class값을
 왜 이런걸까요? 
 
 원인은 바로 qrueySelect가 해당 값의 첫번쨰 요소만을 다루기 때문입니다. 그래서 여러개 요소를 선택할 때는 querySelectorAll()함수를 사용해줘야 됩니다. 
-<br/><br/>
+<br/><br/><br/>
 
 # querySelectorAll
 
