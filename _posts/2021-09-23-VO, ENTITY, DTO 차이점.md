@@ -1,5 +1,5 @@
-<br/><br/>
-# 1. Entity :개체
+
+## 1. Entity :개체
 
 * 실제 db의 테이블과 1:1로 매핑되는 클래스  
 
@@ -10,17 +10,19 @@
 * Domain Logic만 가능 Presentation Logic은 안됨  
 
 * 구현 method는 주로 Service Layer에서 사용  
+
 <br/><br/>
 
-# 2. DTO
+## 2. DTO
 
- * Data Transfer Object: 데이터 전송 객체  
+* Data Transfer Object: 데이터 전송 객체  
 
 * 비동기 처리시 주로 사용  
 
 * 계층간 데이터 교환을 위한 객체(JAVA Beans)  
 
 * DB의 데이터를 Service나 Controller 등으로 보낼 때 사용하는 객체  
+
 ->DB의 데이터가 Presentation Logic Tier로 넘어올 때는 DTO로 변환됨  
 
 *  로직 없는 순수 데이터 객체 GETTER SETTER 메서드만 갖는다.  
@@ -30,7 +32,7 @@
  
 
 
-# 3. VO
+## 3. VO
 
 * Value Object: 객체  
 
@@ -43,7 +45,7 @@
 * GETTER SETTER, 및 테이블 내 있는 필드 외에 추가적인 필드를 가질 수 있다.   
 
 * 여러테이블에대한 공통 속성을 모아 만든 VO클래스를 상속받는 것도 가능   
-<br/><br/><br/><br/>
+<br/><br/><br/>
 
 
 

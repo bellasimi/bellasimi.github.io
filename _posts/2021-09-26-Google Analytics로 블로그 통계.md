@@ -1,8 +1,11 @@
 
 <br/> <br/>
+오늘은 Google Analytics로 사이트 통계를 내는 법을 알아보도록 하겠습니다. 
+전체 설명을 하기전,
 
-* 이미 google anaylitic가 있지만 tracking ID를 모르는 경우는 [여기로](# 2-tracking-id-찾기) 
-* Tracking ID도 아는 경우 [여기로](3-_config.yml-수정하기) 
+이미 google anaylitic가 있지만 tracking ID를 모르신 경우엔 [여기로](# 2-tracking-id-찾기) 
+
+Tracking ID도 아는 경우엔 [여기로](3-_config.yml-수정하기) 가서 글을 읽어주세요! 😎
 
  
 <br/> <br/>
@@ -10,20 +13,17 @@
 
 # 1. Google Analytics 생성 
 
-<br/> <br/>
 
- 
-
-먼저 [google analytics](https://analytics.google.com/analytics/web/)에 접속해 주세요 <br/> 
+먼저 [google analytics](https://analytics.google.com/analytics/web/)에 접속해 주세요 
 
  
 ![image](https://user-images.githubusercontent.com/79133602/134811876-80fb26f0-efde-4a04-aec8-e0f3e9d75f34.png)
 
  
-
+ <br/> 
  
 
-측정시작을 눌러준 다음 계정이름을 지정 <br/> 
+측정시작을 눌러준 다음 계정이름을 지정
 
  
 ![image](https://user-images.githubusercontent.com/79133602/134811897-25a23316-bf55-4bf9-a99e-ec4f16cea9e0.png)
@@ -42,19 +42,14 @@
 ![image](https://user-images.githubusercontent.com/79133602/134811926-5ce95e27-baba-4cb6-b314-be4f7d41dad4.png)
 
  
-그리고 구글 애널리틱스에 동의를 눌러주면 완료화면이 나타납니다.<br/><br/><br/>
-
- 
+그리고 구글 애널리틱스에 동의를 눌러주면 완료화면이 나타납니다.<br/><br/>
 
 
 # 2. tracking ID 찾기 
 
-<br/> <br/>
 
- 
 
-완료 후 메인 페이지 사이드 메뉴 맨 아래 관리 버튼을 클리해주면 <br/> 
-
+완료 후 메인 페이지 사이드 메뉴 맨 아래 관리 버튼을 클릭해주면 
  
 ![image](https://user-images.githubusercontent.com/79133602/134811997-87311f4f-beef-4346-8404-cdbfc5674e7f.png)
 
@@ -69,7 +64,7 @@
 
  
 
-만약 저처럼 없다면 <br/> 
+만약 저처럼 없다면 
 
  ![image](https://user-images.githubusercontent.com/79133602/134812049-c7cf5921-6256-4b15-9d39-b3ae6644f18d.png)
 
@@ -80,14 +75,14 @@
 ![image](https://user-images.githubusercontent.com/79133602/134812055-dd9b9b5d-16e8-4e0a-b085-80a540a4b595.png)
 
  
-그러면 세부정보가 뜨면서 tracking ID를 알아낼 수 있습니다.<br/> 
+그러면 세부정보가 뜨면서 tracking ID를 알아낼 수 있습니다.
 
  
 ![image](https://user-images.githubusercontent.com/79133602/134812068-5750cfad-8b80-4bd2-841f-9ae272a0e2c6.png)
 
  
 
-<br/> <br/><br/> 
+<br/> <br/>
 
  
 
@@ -99,10 +94,7 @@
 
  
 
-‘’’ 
-
- 
-
+```
 # Analytics 
 
 analytics: 
@@ -115,15 +107,15 @@ analytics:
 
     anonymize_ip         : # true, false (default) 
 
-‘’’ 
+```
 
  
 
-위와같은 기본값을 아래처럼 바꿔준 뒤 commit and push를 하면 google analytics가 적용됩니다. <br/> 
+위와같은 기본값을 아래처럼 바꿔준 뒤 commit and push를 하면 google analytics가 적용됩니다.  
 
  
 
-‘’’ 
+``` 
 
 # Analytics 
 
@@ -136,9 +128,9 @@ analytics:
     tracking_id          : “G-VBDP11HPZL” 
 
     anonymize_ip         : # true, false (default) 
+```
 
-‘’’ 
-
+<br/> <br/><br/>
 # 참고
 
 💻 [https://velog.io/@eona1301/Github-Blog](https://velog.io/@eona1301/Github-Blog-%EB%B0%A9%EB%AC%B8%EC%9E%90-%ED%86%B5%EA%B3%84Analytics%ED%95%98%EA%B8%B0)
