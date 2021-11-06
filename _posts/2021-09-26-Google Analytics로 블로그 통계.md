@@ -3,9 +3,9 @@
 오늘은 Google Analytics로 사이트 통계를 내는 법을 알아보도록 하겠습니다. 
 전체 설명을 하기전,
 
-이미 google anaylitic가 있지만 tracking ID를 모르신 경우엔 [여기로](# 2-tracking-id-찾기) 
+이미 google anaylitic가 있지만 tracking ID를 모르신 경우엔 [여기로](#2-tracking-id-찾기) 
 
-Tracking ID도 아는 경우엔 [여기로](3-_config.yml-수정하기) 가서 글을 읽어주세요! 😎
+Tracking ID도 아는 경우엔 [여기로](#3-configyml-수정하기) 가서 글을 읽어주세요! 😎
 
  
 <br/> <br/>
