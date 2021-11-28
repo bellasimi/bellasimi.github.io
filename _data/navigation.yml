@@ -1,8 +1,8 @@
 # main links
 main:
   - title: "Monthly"
-    url: /month_archive/
-  - title: "About"
+    url: /month-archive/
+  - title: "Categories"
     url: /categories/
   # - title: "Sample Posts"
   #   url: /year-archive/

@@ -253,7 +253,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
+month_archive:
+  type: liquid
+  path: /month-archive/
 # jekyll-archives:
 #   enabled:
 #     - categories
