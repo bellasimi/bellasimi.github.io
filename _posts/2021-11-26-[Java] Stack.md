@@ -1,7 +1,7 @@
 ---
 title: Stack
 categories:
-	- java
+- java
 tags:
 - java
 last_modified_at:
