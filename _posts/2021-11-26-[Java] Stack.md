@@ -1,3 +1,12 @@
+---
+title: Stack
+categories:
+	- java
+tags:
+- java
+last_modified_at:
+---
+
 stack은 '쌓다', '더미'를 의미합니다. 
 
 밑에서 위로 쌓이는 구조로 후입선출(선출후입) LIFO(Last In First Out)방식을 따라
