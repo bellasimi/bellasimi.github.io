@@ -1,8 +1,20 @@
 # main links
 main:
-  - title: "Categories"
-    url: /categories/
-  - title: "Project"
-    url: /project/
+  - title: "Monthly"
+    url: /month_archive/
   - title: "About"
-    url: /about/
+    url: /categories/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/#mainlinks
