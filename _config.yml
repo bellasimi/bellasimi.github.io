@@ -12,15 +12,15 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "dirt" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
 locale                   : "ko-KR"
-title                    : "개발일지"
+title                    : "개발의 SHIN"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead "version 1.0"
-name                     : "개발자1"
-description              : "프로그래밍에 관한 모든 것을 기록합니다"
+name                     : "개발원/N"
+description              : "기록이 곧 기억"
 url                      : "https://bellasimi.github.io" # the base hostname & protocol for your site e.g. "https://bellasimi.github.io"
 baseurl                  : # the subpath of your site, e.g. "https://github.com/bellasimi/bellasimi.github.io"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -101,9 +101,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "개발자1"
-  avatar           :  "/assets/images/profile/coding.jpg"
-  bio              : "프로그래밍에 관한 모든것을 기록합니다."
+  name             : "개발원/N"
+  avatar           :  "/assets/images/profile/profile.png"
+  bio              : "기록이 곧 기억"
   location         : "Republic of Korea"
   email            : "WorkSY1111@gmail.com"
   links:
