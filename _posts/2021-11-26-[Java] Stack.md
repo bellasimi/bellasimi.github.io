@@ -1,5 +1,7 @@
 ---
 title: Stack
+sidevar:
+  nav: "docs"
 categories:
 - java
 tags:

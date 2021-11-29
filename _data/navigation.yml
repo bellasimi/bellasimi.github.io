@@ -17,4 +17,57 @@ main:
   # - title: "Sample Collections"
   #   url: /collection-archive/
   # - title: "Sitemap"
-  #   url: /sitemap/#mainlinks
+  #   url: /sitemap/
+# docs links
+docs:
+  - title: "BackEnd"
+    children:
+    - title: "Java"
+      url: /main/categories/java/
+    - title: "JS"
+      url: /main/categories/js/
+    - title: "C"
+      url: /main/categories/c/
+    - title: "Python"
+      url:  /main/categories/python/
+
+  - title: "FrontEnd"
+    children:
+    - title: "CSS"
+      url: /main/categories/css/
+    - title: "ETC"
+      url: /main/categories/frontetc/
+    #- title: "C"
+    #  url: /main/categories/c/
+    #- title: "Python"
+    # url:  /main/categories/python/
+
+  - title: "Blog"
+    url: /main/categories/blog/    
+    #children:
+    #- title: "JS"
+    #  url: /main/categories/js/
+    #- title: "C"
+    # url: /main/categories/c/
+    #- title: "Python"
+    #  url:  /main/categories/python/
+
+  - title: "Project"
+    children:
+    - title: "project1"
+      url: /main/categories/project/
+    #- title: "JS"
+    #  url: /main/categories/js/
+    #- title: "C"
+    #  url: /main/categories/c/
+    #- title: "Python"
+    # url:  /main/categories/python/
+
+  - title: "ETC"
+    url: /main/categories/etc/
+    #- title: "Java"
+    #  url: /main/categories/java/
+    #- title: "JS"
+    #  url: /main/categories/js/
+    #- title: "C"
+    #  url: /main/categories/c/
