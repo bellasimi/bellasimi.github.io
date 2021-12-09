@@ -1,3 +1,12 @@
+---
+title: 
+categories:
+- java
+tags:
+- Set
+- List
+last_modified_at:
+---
 아래와 같이 int[] 배열이 있을 때, 서로 다른 두 인덱스의 합을 저장한 뒤 오름차순 정렬을 하려고 합니다. 
 
 단 중복은 허용되지 않습니다.

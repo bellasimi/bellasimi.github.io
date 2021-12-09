@@ -1,4 +1,12 @@
-
+---
+title: 
+categories:
+- error
+tags:
+- ArrayList
+- error
+last_modified_at:
+---
 ![image](https://user-images.githubusercontent.com/79133602/141796823-b8af1401-3028-45a4-a886-59d3f1594fc5.png)
 
 오늘 만난 에러입니다. 

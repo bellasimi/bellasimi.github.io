@@ -1,4 +1,12 @@
-
+---
+title: 
+categories:
+- java
+tags:
+- java
+- List
+last_modified_at:
+---
 다음과 같은 int[] nums를 List형으로 바꿨다가 다시 int[]형태로 바꾸려고 합니다. 
 
 ```

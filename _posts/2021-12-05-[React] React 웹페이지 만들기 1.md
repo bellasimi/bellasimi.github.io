@@ -1,3 +1,14 @@
+---
+title: 
+sidevar:
+  nav: "docs"
+categories:
+- react
+tags:
+- react
+last_modified_at:
+---
+
 > React 프로젝트 생성 및 node.js 서버에 연결 
 
 리엑트를 사용하기 위해선 node.js를 설치해야 합니다. 만약 없으신 분은 [이 페이지](https://bellasimi.github.io/%EC%A0%9C%EC%9D%B4%EC%BF%BC%EB%A6%AC-%EC%9D%B8%EC%8B%9D-%EC%98%A4%EB%A5%98/#%ED%95%B4%EA%B2%B0-%EB%B0%A9%EC%95%88)
