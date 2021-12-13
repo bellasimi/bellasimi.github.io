@@ -10,91 +10,109 @@ tags:
 last_modified_at:
 ---
 
-요즘엔 함수로 컴포넌트를 생성하고 useState를 이용해 값을 저장하지만 
-옛날엔 클래스로 컴포넌트를 생성하고 생성자함수안에 this.state에 값을 저장했습니다. 
 
-물론 이제 그런식으로 코딩할 일을 없겠죠. 
 
-그러나, 유지 보수를 하다보면 옛날 코드를 마주할 때가 있습니다. 오늘은 그런 때를 대비해 구형 컴포넌트 작성법을 보도록 하겠습니다.  
+저번 시간엔 event.target 속성을 이용해 input 값을 state에 저장하는 법을 알아봤는데요. 
+오늘은 그 값을 기존 state 배열에 저장해 화면해 출력하도록 해보겠습니다. 
 
-<br/>
-<br/>
-# class 생성
+![image](https://user-images.githubusercontent.com/79133602/145829240-51bb55a1-4073-4822-a994-914dd5faabfa.png)
 
-먼저 React의 component만드는 클래스를 상속해 클래스를 만들어 줍니다. 
+위와같은 프로젝트 목록이 있습니다. 
 
 ```
-class Profile extends React.Component {
-    constructor(){
-        super();
-        this.state = {name : 'Hah', age : 99}
-    }
+let [프로젝트명, 프로젝트명변경] = useState(["BuyTicketS","Board","nodeWeb"]);
+```
+프로젝트명은 배열로 이뤄진 state 값인데요. 
+
+![image](https://user-images.githubusercontent.com/79133602/145829479-844eba45-7c84-4958-9bce-8b12b1dabb28.png)
+
+이렇게 input에 프로젝트명을 입력하고 저장을 누르면, 프로젝트 목록에 입력한 내용이 보이도록 하겠습니다. 
+
+<br/><br/>
+# input : onChange
+
+![image](https://user-images.githubusercontent.com/79133602/145829296-8864f7f8-461d-4d6b-a8f0-2074e55e7a18.png)
+
+input 태그엔 onChange 메소드를 이용해 값이 변할 때마다 state 값을 event.target의 value값으로 변경하도록 해줬습니다. 
+만약 event.target이 뭔지 모르시겠다면 제 [전 포스트](https://bellasimi.github.io/js/JS-Event.target/)를 확인해주세요
+
+<br/><br/>
+# button : onClick
+
+그리고 이제 저장 버튼을 누르면 onClick 메소드가 saveInput을 호출합니다. saveInput은 변수형 함수로 this를 자동으로 window로 인식해줍니다. 
+
+<br/>
+## 1. saveInput
+
+
+새로운 변수를 만들어 프로젝트명 state값을 복사해주세요. ...spread 연산자를 사용해서 원본배열에 영향을 주지 않도록 합니다! 
+
+복사본 arr에 unshift 함수를 사용해 새로운 값을 0행에 넣어준 뒤 프로젝트명변경에 arr를 넣으면 끝입니다!
+
+```
+const saveInput = () => {
+
+let arr = [...프로젝트명]
+arr.unshift(inputValue)
+
+프로젝트명변경(arr)
+
+```
+
+이외에도 프로젝트명에 값을 변경하는 방법과 나쁜 방법 1가지씩 더 보여드리겠습니다.
+<br/>
+## 2. arr.push 사용
+
+```
+let arr = [...프로젝트명]
+arr.push(inputValue)
+```
+
+<br/>
+
+## 3. 나쁜 방법
+
+프로젝트명에 변수에 직접 unshift 메소드를 이용해서 값을 추가할 수 있습니다. 
+```
+
+프로젝트명.unshift(inputValue)
+프로젝트명변경(프로젝트명)
+
+```
+
+하지만 이러면 렌더링이 잘 되지 않을 수 있으니 꼭 위처럼 복사본을 만들어 변수에 저장 후 , 변수를 조작해 주셔야 합니다!!
+<br/>
+<br/>
+# 추천 비추 기능 추가
+
+위의 코드만으론 추천 비추 기능이 작동하지 않습니다. 
+
+saveInput 호출 시 추천 비추 state를 변경해줘야 해당 메소드가 작동할 수 있기 때문이죠. 그래서 위 코드 아래 다음 내용을 추가해줍니다.
+
+
+```
+let newRepArr = [];
+ for(var i=0;i<프로젝트명.length+1;i++){
+    newRepArr.push(0);
+ }
+setGood(newRepArr)
+setBad(newRepArr)
+
 }
 ```
 
-그다음 생성자 함수를 만들어 주고, 그 안에 해당 클래스에서 사용할 state 변수값을 입력해줍니다.
-
-현대식 문법이 useState() 메소드를 사용해 객체를 각각 다른 변수에 넣어 관리해주는 것과 달리 모든 값을 this.state 하나의 변수에 담아 사용합니다.
-
-꼭 this를 붙여서 전역을 참조하도록 해주세요!
-
-```
-render(){
-    return(
-       <div>
-            <h1>옛날 방법 컴포넌트 만들기</h1>
-            <li>이름 : {this.state.name}</li>
-            <li>나이 : {this.state.age}</li>
-            <button onClick={ ()=> {this.setState({name:'Choi'})}}>
-	       이름변경
-	</button>
-            <button onClick={()=>{ this.changeAge.bind(this) }}>
-	       나이변경
-	</button>
-        </div>
-    )
-
-}
-
-```
-
-생성자함수 아래 render 함수를 이용해 웹상에 띄울 html 문서를 return하도록 코드를 짜줍니다. 
-
-<br/>
-<br/>
-# state 변경
-
-여기서 state값을 사용하기 위해선 {} 안에 변수명을 입력하면 되는데, 
-값을 변경하고 싶을 때는 setState()를 써서 this.state의 특정 객체만 따로 수정하는 것도가능합니다. 
-
-현대식 문법이 값의 일부만 변경하기 번거로운데 비해 이런점은 편리하네요.
-
-만약 함수를 따로 빼서 사용하고 싶다면 
-
-```
-changeAge(){
-    this.setState({age : 19})
-}
-
-```
-이런식으로 render()위에 코딩을 하고 return문의 jsx문법으로 불러오면 되는데요. 
+프로젝트명이 추가될 때마다 평가배열이 달라지므로 for문으로 새로 newRepArr를 만들고, 그 배열을 추천 비추 값으로 변경해주는 코드입니다. 
 
 
-한가지 주의할 점이 있습니다. 
+![image](https://user-images.githubusercontent.com/79133602/145834577-4bbdbe90-40d8-4a1e-933a-0480e46966a3.png)
 
+그러면 이제 제대로 프로젝트명이 저장되고 추천 비추 기능이 작동하는 것을 볼 수 있습니다. 
 
-자바스크립트에서 변수는 this를 window 즉 전역으로 인식하고,함수는 해당함수 내의 지역안에서 인식합니다. 
-따라서 changeAge 함수를 onClick에서 호출할 때 그냥 this.changeAge라고 불러오면
-changeAge안의 값 this.setState({age:19})이 전역을 참조하지 못 해 에러가 납니다. 
+<br/><br/><br/>
 
-꼭 bind(this)함수를 써서 전역을 인식하게 해주세요. 
+# 참조
 
-만약 bind(this)함수를 쓰기 싫다면 changeAge 함수를 변수화해서 사용해주세요. 
+💻 [리액트의 불변성: spread](https://unit-15.tistory.com/entry/React-%EB%A6%AC%EC%95%A1%ED%8A%B8%EC%9D%98-%EB%B6%88%EB%B3%80%EC%84%B1-%EC%8A%A4%ED%94%84%EB%A0%88%EB%93%9C-%EC%97%B0%EC%82%B0%EC%9E%90-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-%EB%B6%88%EB%B3%80%EC%84%B1-%EC%A7%80%ED%82%A4%EA%B8%B0)
 
-```
-changeAge = () => {
-     this.setState({age : 19})
-}
-```
 
 
