@@ -77,6 +77,7 @@ node 서버에서 "/profile"이라는 매핑주소를 입력시 react프로젝�
 
 
 ```
+const path = require("path");
 app.use(express.static(path.join(__dirname,"profile/build")));
 
 app.get("/profile",(req,res) => {
