@@ -294,5 +294,5 @@ defaults:
       path: ""
       type: docs
     values:
-      sidebar: true
+      sidebar: 
         nav: "docs"
