@@ -137,10 +137,10 @@ require는 nodeJS에서 사용되는 CommonJS 키워드로 import와 같은 역�
 
 # 참고
 
-💻 [public, src img 불러오는 차이] (https://velog.io/@rimo09/React-Create-react-app-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B2%BD%EB%A1%9C%EB%A5%BC-%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95)
+💻 [ public, src img 불러오는 차이 ]( https://velog.io/@rimo09/React-Create-react-app-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%97%90%EC%84%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B2%BD%EB%A1%9C%EB%A5%BC-%EC%84%A4%EC%A0%95%ED%95%98%EB%8A%94-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95 )
 
-💻 [require VS import] (https://sowon-dev.github.io/2021/03/29/210330React-tip/)
+💻 [ require VS import ]( https://sowon-dev.github.io/2021/03/29/210330React-tip/ )
 
-💻 [require import 차이점] (https://hsp0418.tistory.com/147)
+💻 [ require import 차이점 ](https://hsp0418.tistory.com/147 )
 
-💻 [자바스크립트 CommonJS 모듈 내보내기, 불러오기] (https://www.daleseo.com/js-module-require/#:~:text=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%EC%9D%84%20%ED%95%98%EB%8B%A4,%EC%83%88%EB%A1%AD%EA%B2%8C%20%EB%8F%84%EC%9E%85%EB%90%9C%20%ED%82%A4%EC%9B%8C%EB%93%9C%EC%9E%85%EB%8B%88%EB%8B%A4.)
+💻 [ 자바스크립트 CommonJS 모듈 내보내기, 불러오기 ]( https://www.daleseo.com/js-module-require/#:~:text=%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EA%B0%9C%EB%B0%9C%EC%9D%84%20%ED%95%98%EB%8B%A4,%EC%83%88%EB%A1%AD%EA%B2%8C%20%EB%8F%84%EC%9E%85%EB%90%9C%20%ED%82%A4%EC%9B%8C%EB%93%9C%EC%9E%85%EB%8B%88%EB%8B%A4 )
