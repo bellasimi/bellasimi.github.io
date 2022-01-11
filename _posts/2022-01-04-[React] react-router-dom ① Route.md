@@ -19,9 +19,9 @@ last_modified_at:
 리액트에서 페이지를 여러 개 띄우기 위해선 react-router-dom 라이브러리 사용해 라우팅을 해줘야 합니다.(페이지 나누기)
 
 ```
-Yarn add react-router-dom@5
+yarn add react-router-dom@5
 
-Npm install react-router-dom@5
+npm install react-router-dom@5
 ```
 
 터미널에 위 명령어 중 하나를 입력하면 설치가 완료되는데 이후에 다음과 같이 초기 설정을 해줘야 합니다.
