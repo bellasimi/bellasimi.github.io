@@ -37,7 +37,9 @@ npm install add axios
 
 설치가 완료되면 ajax 기능을 사용할 컴포넌트에서 import를 해주고
 
-![image](https://user-images.githubusercontent.com/79133602/149661729-16221f3e-2278-4c1f-90ad-639f220ddef6.png)
+```
+import axios from 'axios';
+```
 
 axios 뒤에 다음 함수들을  붙여서 코드를 짜주시면 됩니다. 
  
