@@ -21,6 +21,9 @@ body {
   }
 }
 
+
+
+
 h1,
 h2,
 h3,
@@ -126,6 +129,9 @@ blockquote {
 /* links */
 
 a {
+  
+  text-decoration: none;  
+
   &:focus {
     @extend %tab-focus;
   }
