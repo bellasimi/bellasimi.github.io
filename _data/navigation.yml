@@ -19,30 +19,34 @@ main:
   # - title: "Sitemap"
   #   url: /sitemap/
 # docs links
-docs:
-  - title: "BackEnd"
+sidebar-list:
+  - title: "MENU"
     children:
     - title: "Java"
-      url: /main/categories/java/
+      url: /categories/#java/
     - title: "JS"
-      url: /main/categories/js/
-    - title: "C"
-      url: /main/categories/c/
-    - title: "Python"
-      url:  /main/categories/python/
-
-  - title: "FrontEnd"
-    children:
+      url: /categories/#js/
+    - title: "React"
+      url: /categories/#react/
     - title: "CSS"
-      url: /main/categories/css/
-    - title: "ETC"
-      url: /main/categories/frontetc/
+      url: /categories/#css/
+    - title: "Error"
+      url: /categories/#error/
+    - title: "Blog"
+      url: /categories/#blog/
+
+  #- title: "FrontEnd"
+    #children:
+    #- title: "CSS"
+      #url: /categories/#css/
+    #- title: "ETC"
+      #url: /categories/#frontetc/
     #- title: "C"
     #  url: /main/categories/c/
     #- title: "Python"
     # url:  /main/categories/python/
 
-  - title: "Blog"
+  #- title: "Blog"
     url: /main/categories/blog/    
     #children:
     #- title: "JS"
@@ -54,8 +58,8 @@ docs:
 
   - title: "Project"
     children:
-    - title: "project1"
-      url: /main/categories/project/
+     title: "pwasite"
+      url: /pwasite/
     #- title: "JS"
     #  url: /main/categories/js/
     #- title: "C"
@@ -64,7 +68,7 @@ docs:
     # url:  /main/categories/python/
 
   - title: "ETC"
-    url: /main/categories/etc/
+    url: /categories/#etc/
     #- title: "Java"
     #  url: /main/categories/java/
     #- title: "JS"
