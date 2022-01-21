@@ -22,45 +22,33 @@ main:
 sidebar-list:
   - title: Programming
     children:
-    - title: "Java"
-      url: /docs/java/
-    - title: "JS"
-      url: /docs/js/
-    - title: "React"
-      url: /docs/react/
-    - title: "CSS"
-      url: /docs/css/
-    - title: "Error"
-      url: /docs/error/
+      - title: "Java"
+        url: /docs/java/
+      - title: "JS"
+        url: /docs/js/
+      - title: "React"
+        url: /docs/react/
+      - title: "CSS"
+        url: /docs/css/
+      - title: "Error"
+        url: /docs/error/
 
-  - title: Blog
+  - title: "Blog"
     url: /docs/blog/
-    #children:
-    #- title: "CSS"
-      #url: /categories/#css/
-    #- title: "ETC"
-      #url: /categories/#frontetc/
-    #- title: "C"
-    #  url: /main/categories/c/
-    #- title: "Python"
-    # url:  /main/categories/python/
+
+  - title: "ETC"
+    url: /docs/ect/
+
 
   - title: Project
     children:
-     - title: "pwasite"
-       url: /docs/pwasite/
-    #- title: "JS"
-    #  url: /main/categories/js/
-    #- title: "C"
-    #  url: /main/categories/c/
-    #- title: "Python"
-    # url:  /main/categories/python/
-
-  - title: ETC
-    url: /docs/etc/
-    #- title: "Java"
-    #  url: /main/categories/java/
-    #- title: "JS"
-    #  url: /main/categories/js/
-    #- title: "C"
-    #  url: /main/categories/c/
+      - title: "shoppingMall"
+        url: https://bellasimi.github.io/shoppingMall/
+      #- title: "Working with Pages"
+        #url: /docs/pages/
+      #- title: "Working with Collections"
+        #url: /docs/collections/
+      #- title: "Helpers"
+        #url: /docs/helpers/
+      #- title: "Utility Classes"
+        #url: /docs/utility-classes/
