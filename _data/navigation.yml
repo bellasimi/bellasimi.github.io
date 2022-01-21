@@ -20,7 +20,7 @@ main:
 
 # docs links
 sidebar-list:
-  - title: "Programming"
+  - title: Programming
     children:
     - title: "Java"
       url: /docs/java/
@@ -33,7 +33,7 @@ sidebar-list:
     - title: "Error"
       url: /docs/error/
 
-  - title: "Blog"
+  - title: Blog
     url: /docs/blog/
     #children:
     #- title: "CSS"
@@ -45,7 +45,7 @@ sidebar-list:
     #- title: "Python"
     # url:  /main/categories/python/
 
-  - title: "Project"
+  - title: Project
     children:
      - title: "pwasite"
        url: /docs/pwasite/
@@ -56,7 +56,7 @@ sidebar-list:
     #- title: "Python"
     # url:  /main/categories/python/
 
-  - title: "ETC"
+  - title: ETC
     url: /docs/etc/
     #- title: "Java"
     #  url: /main/categories/java/
