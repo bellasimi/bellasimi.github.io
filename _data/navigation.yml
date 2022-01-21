@@ -19,6 +19,14 @@ main:
 
 
 # docs links
+docs:
+  - title: quick
+    children:
+      - title: "quick"
+        url: /docs/quick-start-guide/
+
+
+# docs links
 sidebar-list:
   - title: Programming
     children:
