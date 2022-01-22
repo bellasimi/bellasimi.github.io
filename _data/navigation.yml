@@ -18,34 +18,32 @@ main:
   #   url: /collection-archive/
 
 
-# docs links
-docs:
-  - title: quick
-    children:
-      - title: "quick"
-        url: /docs/quick-start-guide/
-
-
-# docs links
+# posts links
 sidebar-list:
   - title: Programming
     children:
+      - title: "Install"
+        url: /_posts/install/
       - title: "Java"
-        url: /docs/java/
+        url: /_posts/java/
       - title: "JS"
-        url: /docs/js/
+        url: /_post/js/
+      - title: "DB"
+        url: /_post/db/
       - title: "React"
-        url: /docs/react/
-      - title: "CSS"
-        url: /docs/css/
+        url: /_post/react/
+      - title: "FrontEnd"
+        url: /_post/frontend/
       - title: "Error"
-        url: /docs/error/
+        url: /_post/error/
+      - title: "Git"
+        url: /_post/git/
 
   - title: "Blog"
-    url: /docs/blog/
+    url: /_post/blog/
 
   - title: "ETC"
-    url: /docs/ect/
+    url: /_post/etc/
 
 
   - title: Project

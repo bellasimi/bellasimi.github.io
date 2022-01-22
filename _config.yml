@@ -290,10 +290,12 @@ defaults:
       comments:  true
       share: true
       related: true
+      sidebar: 
+       nav: "sidebar-list"
   # _docs
   - scope:
       path: ""
       type: docs
     values:
       sidebar: 
-       nav: "docs"
+       nav: "sidebar-list"
