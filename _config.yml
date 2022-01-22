@@ -291,11 +291,11 @@ defaults:
       share: true
       related: true
       sidebar: 
-       nav: "sidebar-list"
+        nav: "sidebar-list"
   # _docs
   - scope:
       path: ""
       type: docs
     values:
       sidebar: 
-       nav: "sidebar-list"
+        nav: "sidebar-list"
