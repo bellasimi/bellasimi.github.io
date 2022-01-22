@@ -1,9 +1,10 @@
 ---
 title: 
 categories:
-- blog
+- react
 tags:
-- blog
+- react
+- error
 last_modified_at:
 ---
 
@@ -13,12 +14,12 @@ last_modified_at:
 평소처럼 npm start로 리액트 프로그램을 실행하려는데 위와 같은 오류를 만났습니다. 😫 
 
 원인은 무엇이고 어떻게 해결해야 할까요?
-<br/>
-# 원인
+<br/><br/>
+# ❓ 원인
 
 해당 프로그램 경로에 react-scripts 모듈이 제대로 설치되지 않았거나 버전이 구형이라 발생한 오류입니다.
-<br/>
-# 해결 방법
+<br/><br/>
+# ❗ 해결 방법
 
 > yarn upgrade
 
@@ -26,8 +27,10 @@ last_modified_at:
 다음 명령어 중 하나를 택해 터미널에 입력해주세요.
 
 > yarn add react-scripts
+
 > npm install -save react-scripts
-<br/>
+
+<br/><br/>
 # 번외
 
 > yarn add global react-scripts

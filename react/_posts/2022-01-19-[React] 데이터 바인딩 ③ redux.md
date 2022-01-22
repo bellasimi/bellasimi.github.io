@@ -1,7 +1,5 @@
 ---
 title: 
-sidebar:
-  nav: "main"
 categories:
 - react
 tags:
