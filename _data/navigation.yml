@@ -23,27 +23,27 @@ sidebar-list:
   - title: Programming
     children:
       - title: "Install"
-        url: /_posts/install/
+        url: /install/
       - title: "Java"
-        url: /_posts/java/
+        url: /java/
       - title: "JS"
-        url: /_post/js/
+        url: /js/
       - title: "DB"
-        url: /_post/db/
+        url: /db/
       - title: "React"
-        url: /_post/react/
+        url: /react/
       - title: "FrontEnd"
-        url: /_post/frontend/
+        url: /frontend/
       - title: "Error"
-        url: /_post/error/
+        url: /error/
       - title: "Git"
-        url: /_post/git/
+        url: /git/
 
   - title: "Blog"
-    url: /_post/blog/
+    url: /blog/
 
   - title: "ETC"
-    url: /_post/etc/
+    url: /etc/
 
 
   - title: Project
