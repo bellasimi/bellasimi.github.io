@@ -1,6 +1,16 @@
-# IntelliJ가 실행이 안될 때
+---
+title: 
+categories:
+tags:
+- error
+- intellij
+last_modified_at:
+---
+
+IntelliJ가 실행이 안될 때
 cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을 입력해줍니다.
 그랬을 때 다음과 같은 메세지가 뜬다면
+
 ![캡처1](https://user-images.githubusercontent.com/79133602/133450360-9bc07df4-53c9-466e-a3c3-ab91b6f3f093.PNG)
 
 문제가 있는겁니다 👿
@@ -17,10 +27,12 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 밑에는 해결과정이 다 써져 있기에 
 결과만 보고 싶으신 분은 [해결법](#5-사용자-appdata에-있는-jetbrain-폴더-삭제) 클릭해주세요!
 
+<br/>
 # 1. 재설치
 
 기존 인텔리제이를 삭제하고 재설치를 해봤지만 여전히 같은 에러 메세지가 뜨더군요.
 
+<br/>
 # 2. 시스템 복구 
 
 ![image](https://user-images.githubusercontent.com/79133602/133452704-8baa0642-dcc1-4a4c-be11-7de698fe86b9.png)
@@ -29,6 +41,7 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 
 결과는.... 😭 여전히 같은 오류.. 
 
+<br/>
 # 3. 구글링 및 커뮤니티에 질문
 
 스택오버플로우나 오키같은 사이트에 물었으나 VMoptions 파일에 해당 오타를 지우라는 답만 들었습니다. 
@@ -36,13 +49,14 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 
 ![ex -vmoptions](https://user-images.githubusercontent.com/79133602/133453546-2e67903e-1114-4838-af21-49c61d979b2d.PNG)
 
+<br/>
 # 4. JetBrain에 직접 문의 
 ![image](https://user-images.githubusercontent.com/79133602/133453808-3ab5afa1-d88b-46db-904c-2cccf1645eb2.png)
 여전히 VMoptions파일을 지우라는 말뿐입니다. 
 
 앞으로 해결을 해야될텐데... 일단 저 답변에 그렇게 했는데도 안되고 제 디렉토리 상태와 오류 메세지 오류가 발생한 원인에 대해 더 적어뒀는데 제발 해답을 알려주길 바랄 뿐입니다.
 
-
+<br/>
 # 5. 사용자 AppData에 있는 JetBrain 폴더 삭제
 먼저 AppData를 보기 위해 탐색기의 보기 메뉴에서 숨긴항목 보기를 체크해줍니다.
 
@@ -66,7 +80,7 @@ cmd 창에 cd 인텔리제이가 있는 파일 주소명을 입력 - idea.bat을
 
 다시 정상작동하는 것을 볼수 있습니다!!😆
 
+<br/><br/><br/>
+# 참고
 
-<참고>
-
-'인텔리제이 공식 홈페이지' : <https://intellij-support.jetbrains.com/hc/en-us/articles/360007568559>
+💻 [인텔리제이 공식 홈페이지](https://intellij-support.jetbrains.com/hc/en-us/articles/360007568559)

@@ -1,3 +1,12 @@
+---
+title: 
+categories:
+tags:
+- error
+- mysql
+last_modified_at:
+---
+
 
 # 1. edit - preferences
 
@@ -10,6 +19,7 @@
 스크롤을 쭉 내려야 보이는 경우가 있으니 마지막을 잘 봐주세요!
 참고로 체크 해제 후 재시작을 해야 적용됩니다. 😊😊
 
+<br/>
+# 참조
 
-[참조]( https://www.popit.kr/mysql-workbench-%EC%97%90%EC%84%9C-error-code-1175-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/
-)
+💻 [mysql workbench 오류](https://www.popit.kr/mysql-workbench-%EC%97%90%EC%84%9C-error-code-1175-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0-%EB%B0%A9%EB%B2%95/)

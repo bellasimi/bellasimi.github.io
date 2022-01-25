@@ -1,7 +1,16 @@
+---
+title: 
+categories:
+tags:
+- error
+- thymeleaf
+last_modified_at:
+---
+
+오늘 만난 에러 원인은 무엇이었을까요?
 
 ![image](https://user-images.githubusercontent.com/79133602/136960344-26a4f537-4e6d-4736-acb8-174f0d453fbb.png)
 
-오늘 만난 에러 원인은 무엇이었을까요?
 parse가 안되는걸 보아 값이 잘못 입력된것 같은데요.
 
 해당 페이지 코드를 보니 다음과 같았습니다. 

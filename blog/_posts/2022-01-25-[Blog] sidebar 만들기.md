@@ -11,6 +11,7 @@ last_modified_at:
 오늘은 블로그에 다음과 같이 sidebar를 추가해보도록 하겠습니다. 
 
 ![image](https://user-images.githubusercontent.com/79133602/150911925-ffc9333e-25c9-4c46-aeec-d11e84014f48.png)
+
 <br/>
 ❗ 해당글은 jekyll minimal-mistakes를 기준으로 작성됐습니다. 
 
@@ -113,18 +114,8 @@ author_prof1ile이 true여야 sidebar가 나옵니다! false면 sidebar 속성�
 _pages 폴더에_ 가서 sidebar 메뉴 클릭시 나올 페이지를 만들어 줍니다. 
 전 /java/라는 url접속시 archive 레이아웃 html이 뜨고 해당 페이지에 title로 Java가 나오는 category-java.md를 만들었습니다. 
 
-```
----
-title: "Java"
-permalink: /java/
-layout: archive
----
+![image](https://user-images.githubusercontent.com/79133602/150950665-efa9c982-ce3e-44a6-8898-900c8be5ba8a.png)
 
-{% assign posts = site.categories.java %}
-{% for post in posts %}
-	{% include archive-single.html type=page.entries_layout %}
-{% endfor%}
-```
 
 assign posts = site.categories.java 카테고리가 java인 post들을 posts에 할당하고, 해당 카테고리의 post들을 entries_layout을 써서 리스트로 출력합니다.
 
@@ -140,8 +131,8 @@ assign posts = site.categories.java 카테고리가 java인 post들을 posts에 
 <br/><br/><br/>
 # 참고
 
-🖥 [ minimal-mistakes menual ] ( https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu )
+🖥 [minimal-mistakes menual](https://mmistakes.github.io/minimal-mistakes/docs/layouts/#custom-sidebar-navigation-menu )
 
-🖥 [ jekyll 같은 카테고리만 모아두는 페이지 생성 ] ( https://ansohxxn.github.io/blog/category/#2%EF%B8%8F%E2%83%A3-%EA%B0%99%EC%9D%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EB%A7%8C-%EB%AA%A8%EC%95%84%EB%91%90%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80)
+🖥 [jekyll 같은 카테고리만 모아두는 페이지 생성](https://ansohxxn.github.io/blog/category/#2%EF%B8%8F%E2%83%A3-%EA%B0%99%EC%9D%80-%EC%B9%B4%ED%85%8C%EA%B3%A0%EB%A6%AC%EB%A7%8C-%EB%AA%A8%EC%95%84%EB%91%90%EB%8A%94-%ED%8E%98%EC%9D%B4%EC%A7%80)
 
-🖥 [ gitpage 블로그 만들기 ] ( https://seungwubaek.github.io/blog/post_1/#page-title )
+🖥 [gitpage 블로그 만들기](https://seungwubaek.github.io/blog/post_1/#page-title )

@@ -1,4 +1,10 @@
-
+---
+title: 
+categories:
+tags:
+- error
+last_modified_at:
+---
 
 
 오늘 만난 에러는 다음과 같습니다. 
@@ -6,8 +12,7 @@
 ![image](https://user-images.githubusercontent.com/79133602/138111880-8ff1e3d7-5ccc-44a2-84a7-02b9fae5fe88.png)
 
 
-
-
+<br/>
 # 원인 🤔
 
 사용자가 입력한 문자나 기호를 컴퓨터가 이해할 수 있는 신호로 바꿔주는 작업을 인코딩이라고 하는데요. 
@@ -19,12 +24,12 @@
 
 
 
-
+<br/><br/>
 # 파일 인코딩
 
 인텔리제이 기준 
 
-
+<br/>
 ##  File - Settings - Editor - File Encodings 
 
 위 메뉴에 들어가서  다음과 같이 설정을 변경해줍니다. 
@@ -41,8 +46,7 @@
 
 
 
-
-
+<br/><br/><br/>
 # 참조
 
 💻 [인텔리제이 공식사이트](https://www.jetbrains.com/help/idea/2019.2/configuring-individual-file-encoding.html#console)
