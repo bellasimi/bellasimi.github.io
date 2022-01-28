@@ -1,7 +1,5 @@
 ---
 title: 
-sidevar:
-  nav: "docs"
 categories:
 - react
 tags:
