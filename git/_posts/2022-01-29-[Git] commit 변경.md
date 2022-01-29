@@ -9,11 +9,10 @@ last_modified_at:
 만약 commit시 메세지를 잘못 입력했다면 아래 방법으로 수정하시면 됩니다.
 
 <br/>
-# 방금 전에 한 commit인 경우
+## 방금 전에 한 commit인 경우
 
 ```
- git commit --amend
-
+git commit --amend
 ```
 
 터미널에서 git commit --amend라고 명령합니다.
@@ -25,7 +24,7 @@ last_modified_at:
 그리고 위와 같은 창이 뜨면 노란색 메시지 부분을 바꿔주시고 -esc -:wq를 차례대로 입력해 빠져나오시면 됩니다. 
 
 <br/><br/>
-# 훨씬 이전의 commit인 경우
+## 훨씬 이전의 commit인 경우
 
 ```
 git reabse -i HEAD~불러올 commit개수
@@ -45,7 +44,7 @@ pcik commit번호 commit메세지
 그리고 :wq 하시면 입력한 commit 메세지로 수정됩니다. 
 
 <br/><br/>
-# 번외: commit 삭제하고 싶을 때
+## 번외: commit 삭제하고 싶을 때
 
 ```
 git reset HEAD^ //최신 commit 보다 전으로 reset
@@ -57,9 +56,12 @@ HEAD는 가장 최신 commit을 의미합니다. HEAD에 ^를 붙이면 최신 c
 <br/>
 # ❗ 주의: push한 commit일 때
 
+<br/>
 왠만하면 commit을 삭제하지 마세요 ….😫
 
 삭제 후 git push -f origin main을 해야되는데… 그러면 협업중이던 팀 파일들이 변경되고 작업중이던 팀원들이 push하려고할 때 충돌이 일어납니다…. 
 
 <br/><br/><br/>
-# 💻 [git 튜토리얼](https://backlog.com/git-tutorial/kr/stepup/stepup7_1.html)
+# 참고
+
+💻 [git 튜토리얼](https://backlog.com/git-tutorial/kr/stepup/stepup7_1.html)
