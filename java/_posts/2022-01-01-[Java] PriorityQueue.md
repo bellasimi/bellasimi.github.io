@@ -1,9 +1,6 @@
 ---
 title: 
-sidevar:
-  nav: "docs"
 categories:
-- java
 tags:
 - java
 - queue

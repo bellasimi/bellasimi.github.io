@@ -1,12 +1,12 @@
 ---
-title: 미디어 쿼리
 categories:
 - frontend
 tags:
 - css
-- @media
+- media
 last_modified_at:
 ---
+
 반응형 웹사이트 만들기위해 화면 크기마다 css달리 적용해줍니다.
 
 # 문법 
