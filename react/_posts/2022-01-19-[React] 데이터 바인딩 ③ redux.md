@@ -117,6 +117,79 @@ dispatch의 매개변수로 객체 데이터에 type,idx 속성값을 넣어 넘
 그럼 그 값을 reducer가 디스패치로 받아 조건문에 디스패치.속성명으로 사용할 수 있습니다. 
 
 <br/>
+## payload로 값 전달
+
+
+이제 버튼에 paylaod, 또는 data 속성으로 데이터 값을 보내 그 값만큼 증가 시켜보도록하겠습니다.
+
+![image](https://user-images.githubusercontent.com/79133602/154848765-0abdbdb6-99b1-4f21-bfe4-c17e454e83ec.png)
+
+
+Reducer()의 두번째 매개변수가 dispatch의 값이므로, 객체의 payload값에 접근하기 위해 디스패치.payload라고 쓴뒤 type==="+" 일 떄 조건문을 다음과 같이 수정합니다.
+
+![image](https://user-images.githubusercontent.com/79133602/154848770-e8a90bde-b784-4474-a59b-9245b9b70d87.png)
+
+
+그럼 이제 1이 아니라 payload로 보낸 값만큼 증가하는 것을 볼 수 있습니다. 
+
+![image](https://user-images.githubusercontent.com/79133602/154848774-7ed30b36-a253-4b98-970e-1f964a780e70.png)
+
+<br/>
+# 예시 2 : 장바구니에 값 추가
+
+Detail 컴포넌트의 장바구니 버튼을 누르면 해당 상품의 데이터를 장바구니 데이터에 추가해봅시다.
+
+
+<br/>
+## 0. redux 사용전 setting
+ 
+먼저 해당 컴포넌트에서 redux를 사용하려면 redux의 state를 props로 바꿔주는 함수와 
+Connect 기능이 필요합니다. 
+
+```
+Import { connect } from 'react-redux';
+
+
+Function detailRedux(state) {
+     return {
+	State : state.reducer
+     }
+}
+Export default connect(detailRedux)(Detail)
+
+```
+
+<br/>
+## 1. props.dispatch()
+
+장바구니 버튼을 누르면  아래 정보들을 dispatch로 reducer에 전송합니다.
+
+![image](https://user-images.githubusercontent.com/79133602/154848786-2ce1c33e-585e-4fdb-a367-de01d8a3d36b.png)
+
+
+> props.dispatch( { type: "addGoods", payload: 해당 신발의 데이터 })
+
+그런데 개발환경에서 새로 고침하면 redux도 초기화됩니다. 그러니 이를 방지하고 싶다면, 새로고침없이 바로 페이지 이동이 가능하도록 onClick 콜백함수 내에 history.push("/cart")를 써줍니다. 
+
+
+<br/>
+## 2. reducer 조건문 
+
+그리고 Index.js의 reducer에서 디스패치.type === "addGoods" 조건일 떄 state 배열에 디스패치.payload 값을 push하도록 합니다. 
+
+![image](https://user-images.githubusercontent.com/79133602/154848794-0e1d75fe-e353-4392-960c-90621f80109f.png)
+
+
+만약 같은 상품을 담았다면, 새로운 행에 추가되는 대신 해당 상품의 수량만 증가시켜줘야합니다. 
+
+그래서 아래와 같이 조건을 추가 합니다. 
+
+![image](https://user-images.githubusercontent.com/79133602/154848801-4e4704f5-7736-4a06-aab1-7939e3b73f88.png)
+
+<br/>
+여기서 주의점은 idExist 변수 선언이 해당 addGoods조건일 때 이뤄져야 한다는 겁니다.
+만약 다른 type조건일 떄 또는 전역에서 선언되면 디스패치.payload.id라는 값이 존재하지 않아 에러가 납니다.!
+
 ## props.dispatch() : 옛날 방식
 
 옛날에는 useDispatch()대신 props로 dispatch값을 보냈습니다. 이경우에 import할 라이브러리는 없습니다. 
