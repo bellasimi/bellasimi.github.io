@@ -10,10 +10,11 @@ tags:
 last_modified_at:
 ---
 
+<br/>
 box-shadow는 선택한 요소에 그림자 효과를 만들어 주는 css 속성입니다.
 기본값은 none으로 그림자 효과가 없는 상태입니다.
 
-<br/><br/>
+<br/>
 # 사용법
 
 > box-shadow: x축 y축 blur spread color
@@ -21,26 +22,26 @@ box-shadow는 선택한 요소에 그림자 효과를 만들어 주는 css 속�
 
 x축 : 오른쪽, 왼쪽 그림자 효과를 줍니다. 양수일 경우 오른쪽에 음수일 경우 왼쪽에 그림자가 생깁니다. 
 
-<br/>
+
 y축:  위, 아래 그림자 효과를 줍니다. 양수일 경우 아래쪽에 음수일 경우 위 쪽에 그림자가 생깁니다.
  
-<br/>
+
 blur: 그림자에 번짐효과를 줍니다. 값이 클 수록 흐릿하게 보입니다. 
 
-<br/>
+
 spread: 그림자의 크기를 설정합니다. 
 
-<br/>
+
 color: 그림자 색을 설정합니다. 
 
-<br/>
+
 inset: 그림자가 안쪽에 생깁니다.
 
 <br/><br/>
 # 사용 예
 
-
-변경전엔 hover css가 없었기 때문에 카드 리스트에 마우스를 대도 변화가 없습니다.
+<br/>
+변경 전엔 hover css가 없었기 때문에 카드 리스트에 마우스를 대도 변화가 없습니다.
 
 ```
 const Card = styled.li`
@@ -91,5 +92,5 @@ const Card = styled.li`
 
 # 참고
 
-💻 [MDN 사이트](https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow)
+💻 [MDN css : box-shadow](https://developer.mozilla.org/ko/docs/Web/CSS/box-shadow)
 
