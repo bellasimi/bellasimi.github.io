@@ -114,6 +114,11 @@ const InputFailField = styled.div`
 
 리액트는 DOM 조작하지 말라그러는데 ... 한숨난다. 자바스크립트 하드코딩해서 프론트 작업할 땐 저거 그냥 docoment.querySelector() 로 가져온 input 요소 classList.toggle(’’)해서 돔 조작 후 변한 클래스명에 맞는 css를 만들면 됐는데.. 얜 어쩌라는 건지 모르겠다. 
 
+# 😎 방법을 찾았다!
+
+useRef 훅을 사용해 DOM을 조작하면 된다!
+
+[참조](https://bellasimi.github.io/react/React-useRef()/)
 <br/><br/><br/>
 # 참조
 

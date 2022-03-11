@@ -8,9 +8,9 @@ tags:
 last_modified_at:
 ---
 
+<br/>
 자바스크립트에서 DOM을 조작할 땐 queryselector나 getElementById, getElementByClassName DOM Selector메소드를 사용했죠. 하지만 리액트에서 그런식으로 DOM을 조작하면 안 됩니다. 대신 useRef() 훅을 사용해야 합니다. 
 
-<br/>
 # useRef란
 
 .current 프로퍼티에 변경가능한 값을 담고 있는 상자와 같습니다. 그리고 다음과 같은 특징을 갖고 있습니다. 
@@ -53,6 +53,7 @@ inputRef.current.value // 2번
 <br/><br/>
 # 여러개의 dom 관리시
 
+<br/>
 만약 여러개의 dom을 조작할 때는 어떻게 해야 할까요?
 
 <br/>
