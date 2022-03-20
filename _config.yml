@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "개발의 SHIN"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead "version 1.0"
-name                     : "개발원/N"
+name                     : "SHIN"
 description              : "기록이 곧 기억"
 url                      : "https://bellasimi.github.io" # the base hostname & protocol for your site e.g. "https://bellasimi.github.io"
 baseurl                  : # the subpath of your site, e.g. "https://github.com/bellasimi/bellasimi.github.io"
@@ -101,11 +101,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "개발원/N"
+  name             : "SHIN"
   avatar           :  "/assets/images/profile/profile.png"
   bio              : "기록이 곧 기억"
   location         : "Republic of Korea"
-  email            : "WorkSY1111@gmail.com"
+  email            : "worksy1111@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -251,7 +251,7 @@ category_archive:
   type: liquid
   path: /categories/
 tag_archive:
-  type: liquid
+  type: liquids
   path: /tags/
 month_archive:
   type: liquid
