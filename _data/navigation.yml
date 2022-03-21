@@ -20,6 +20,9 @@ main:
 
 # sidebar links
 sidebar-list:
+  - title: "TIL"
+    url: /til/
+
   - title: Programming
     children:
       - title: "Install"
