@@ -49,10 +49,10 @@ sidebar-list:
     url: /etc/
 
 
-  - title: Project
-    children:
-      - title: "shoppingMall"
-        url: https://bellasimi.github.io/shoppingMall/
+  #- title: Project
+    #children:
+      #- title: "shoppingMall"
+        #url: https://bellasimi.github.io/shoppingMall/
       #- title: "Working with Pages"
         #url: /docs/pages/
       #- title: "Working with Collections"
