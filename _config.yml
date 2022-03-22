@@ -24,8 +24,8 @@ description              : "기록이 곧 기억"
 url                      : "https://bellasimi.github.io" # the base hostname & protocol for your site e.g. "https://bellasimi.github.io"
 baseurl                  : # the subpath of your site, e.g. "https://github.com/bellasimi/bellasimi.github.io"
 repository               : "bellasimi/bellasimi.github.io" 
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/profile/profile.png"
+teaser                   : "/assets/images/mainTeaser.png"
+logo                     : "/assets/images/logo.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
