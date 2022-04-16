@@ -233,7 +233,7 @@ const throttle = (fn, delay) => {
 
 아래 예시 처럼 모든 이벤트를 처리할 때, 쓰로틀 기법을 쓸 때, 디바운스 기법을 쓸 때 이벤트 내 함수를 실행하는 횟수는 다릅니다.
 
-<p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="jXrYQz" data-user="jaehee" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+<p class="codepen" data-height="776.7999877929688" data-default-tab="result" data-slug-hash="jXrYQz" data-user="jaehee" style="height: 776.7999877929688px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jaehee/pen/jXrYQz">
   The Difference Between Throttling, Debouncing, and Neither</a> by jaeheekim (<a href="https://codepen.io/jaehee">@jaehee</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
