@@ -1,19 +1,3 @@
----
-title: "[TIL] Debounce와 Throttle"
-categories:
-  - til
-tags:
-  - til
-  - Debounce
-  - Throttle
-toc: true
-toc_sticky: true
----
-
-![image](https://user-images.githubusercontent.com/79133602/161557696-fe3b688d-f6d2-4073-a18f-8d57377acaa7.png)
-
-<br/>
-
 # 🔍목차
 
 1. [이벤트 제어가 필요한 순간](#1-이벤트-제어가-필요한-순간)
@@ -86,16 +70,16 @@ toc_sticky: true
 
 ```js
 textarea.addEventListener('keyup', async (e) => {
-    let timer = null
+    let timer
 
     if(timer){
         clearTimeout(timer)
     }
 
     timer = setTimeout(
-      await postApi({
-          ...this.state
-          content: e.target.value
+      postApi({
+        ...this.state
+        content: e.target.value
     }),일정시간)
 })
 ```
@@ -136,7 +120,8 @@ textarea.addEventListener('keyup', async (e) => {
 
 창조절 이벤트에도 디바운스를 사용하면 효율적입니다. 창 너비가 500px미만이 되면 돔 조작 함수를 호출할 때 만약 resize될 때마다 조건문을 실행하면 500px이하에서 창조절시 불필요한 함수 호출이 발생합니다.
 
-아래 예시를 보면 아시겠지만 디바운스를 주고 안주고에 따라 창조절 이벤트의 횟수가 확연히 차이가 납니다.
+어짜피 최종적으로 결정한 창크기만이 유의미하기 때문에 다음과 같이 디바운싱을 해서 최적화를 해줘야 합니다.
+아래 예시를 보면 아시겠지만 디바운스를 주고 안 주고에 따라 창조절 이벤트의 횟수가 확연히 차이가 납니다.
 
 <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="XXPjpd" data-user="dcorb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/dcorb/pen/XXPjpd">
@@ -144,8 +129,6 @@ textarea.addEventListener('keyup', async (e) => {
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-
-어짜피 최종적으로 결정한 창크기만이 유의미하기 때문에 다음과 같이 디바운싱을 해서 최적화를 해줘야 합니다.
 
 이번엔 클로저를 이용해서 모듈화된 디바운스 함수를 사용해보겠습니다.
 
@@ -176,9 +159,9 @@ window.addEventListener("resize", (e) => {
 
 창조절 이벤트가 발생할 때 호출할 함수를 디바운스로 감싸주면 해당 창조절이 더이상 일어나지 않을 때 일정시간 이후 돔조작을 합니다.
 
-하지만 디바운스 방법엔 문제점이 있는데요 즉각적으로 함수를 호춯해 결과물을 화면에 나타나야 되는 순간 setTimeout()때문에 아무 것도 보여줄 수 없습니다.
+하지만 디바운스 방법엔 문제점이 있는데요 이벤트 발생중에도 함수를 호출해 결과물을 보여줘야 할 때입니다.
 
-예를 들어 스크롤을 내릴 때 디바운스 기법으로 api를 호출하면 사용자는 스크롤을 내려도 한동안 아무 것도 볼 수 없습니다.
+예를 들어 무한 스크롤의 경우 스크롤 이벤트를 주는 동안에도 함수를 호출해야 되는데, 디바운스는 이벤트가 끝날 때만 api를 호출하기 때문에 사용자는 스크롤을 멈출 때까지 아무 것도 볼 수 없습니다.
 
 <br/><br/>
 
@@ -221,7 +204,7 @@ const throttle = (fn, delay) => {
 
 ![노션 제목 쓰로틀링](https://user-images.githubusercontent.com/79133602/166110499-523b9cab-2d03-47f3-b140-c09d5301eca1.gif)
 
-당연히 사용자 입장에선 쓰로틀링 기법이 더 편할 것입니다.
+당연히 사용자 입장에선 쓰로틀링 기법이 더 편하겠죠.
 
 <br/><br/>
 
@@ -229,9 +212,9 @@ const throttle = (fn, delay) => {
 
 > 적재적소의 기법을 찾자
 
-디바운스와 쓰로틀의 차이점은 연속적인 이벤트가 끝나길 기다리냐의 여부입니다. 디바운스는 연속적인 이벤트가 다 끝나고 나서 마지막 이벤트만 실행하도록하고, 쓰로틀은 마지막 이벤트를 기다리는 대신 일정시간마다 이벤트를 실행합니다.
+디바운스와 쓰로틀의 차이점은 연속적인 이벤트가 끝나길 기다리냐의 여부입니다. 디바운스는 연속적인 이벤트가 다 끝나고 나서 마지막 이벤트의 콜백함수만 실행하고, 쓰로틀은 마지막 이벤트를 기다리는 대신 일정시간마다 이벤트의 콜백함수를 실행합니다.
 
-아래 예시 처럼 모든 이벤트를 처리할 때, 쓰로틀 기법을 쓸 때, 디바운스 기법을 쓸 때 이벤트 내 함수를 실행하는 횟수는 다릅니다.
+아래 예시처럼 모든 이벤트를 처리할 때, 쓰로틀 기법을 쓸 때, 디바운스 기법을 쓸 때 이벤트 내 함수를 실행하는 횟수는 다릅니다.
 
 <p class="codepen" data-height="776.7999877929690" data-default-tab="result" data-slug-hash="jXrYQz" data-user="jaehee" style="height: 776.7999877929688px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/jaehee/pen/jXrYQz">
@@ -250,7 +233,7 @@ const throttle = (fn, delay) => {
 
 > 데이터 추가 요청 성공여부와 상관없이 업데이트
 
-낙관적 업데이트는 데이터 입력 후 해당 데이터가 서버에 잘 들어갔는지 확인하지 않고 직접 데이터를 기존 데이터에 추가해주는 행위입니다.
+낙관적 업데이트는 데이터 입력 후 해당 데이터가 서버에 잘 들어갔는지 확인하지 않고 직접 데이터를 기존 데이터에 추가해주는 기법입니다.
 
 ## 예시: 글 자동 저장
 
