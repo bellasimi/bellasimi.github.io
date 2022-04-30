@@ -1,15 +1,18 @@
-# 🔍목차
-
-1. [이벤트 제어가 필요한 순간](#1-이벤트-제어가-필요한-순간)
-2. [Debounce](#2-debounce)<br>
-3. [Debounce 사용방법](#3-debounce-사용방법)<br>
-4. [Throttle](#4-throttle)
-5. [Throttle 사용방법](#5-throttle-사용방법)<br>
-6. [정리](#6-정리)<br>
-
+---
+title: "[TIL] Debounce와 Throttle"
+categories:
+  - til
+tags:
+  - til
+  - Debounce
+  - Throttle
+toc: true
+toc_sticky: true
 ---
 
-<br><br>
+![image](https://user-images.githubusercontent.com/79133602/161557696-fe3b688d-f6d2-4073-a18f-8d57377acaa7.png)
+
+<br/>
 
 # 1 이벤트 제어가 필요한 순간
 
