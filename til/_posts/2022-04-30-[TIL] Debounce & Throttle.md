@@ -173,7 +173,7 @@ window.addEventListener("resize", (e) => {
 
 ![image](https://user-images.githubusercontent.com/79133602/165988811-2ce1f4f8-8bdc-4152-8441-0bf7bb970832.png)
 
-## 5 Throttle 사용방법
+# 5 Throttle 사용방법
 
 이벤트가 발생할 때마다 throttle의 매개변수에 호출할 함수와 일정시간을 입력합니다. 그리고 timer가 false인 경우에만 일정시간이 지난 후 함수를 실행합니다.
 
