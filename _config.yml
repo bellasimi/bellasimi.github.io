@@ -20,12 +20,12 @@ title                    : "개발의 SH!N"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead "version 1.0"
 name                     : "SH!N YOUNG"
-description              : "기록이 곧 기억"
+description              : "개발 기록일지"
 url                      : "https://bellasimi.github.io" # the base hostname & protocol for your site e.g. "https://bellasimi.github.io"
 baseurl                  : # the subpath of your site, e.g. "https://github.com/bellasimi/bellasimi.github.io"
-repository               : "bellasimi/bellasimi.github.io" 
+repository               : "bellasimi/bellasimi.github.io"
 teaser                   : "/assets/images/mainTeaser.png"
-logo                     : 
+logo                     :
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "SH!N YOUNG"
   avatar           : "/assets/images/profile/profile.png"
-  bio              :  "기록이 곧 기억"
+  bio              :  "개발 기록일지"
   location         : "Republic of Korea"
   email            : "worksy1111@gmail.com"
   links:
@@ -283,7 +283,7 @@ defaults:
       path: ""
     values:
       author_profile: true
-      sidebar: 
+      sidebar:
         nav: "sidebar-list"
   # _posts
   - scope:
@@ -292,17 +292,17 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time:  false 
+      read_time:  false
       show_date: true
       comments:  true
       share: true
       related: true
-      sidebar: 
+      sidebar:
         nav: "sidebar-list"
   # _docs
   - scope:
       path: ""
       type: docs
     values:
-      sidebar: 
+      sidebar:
         nav: "sidebar-list"
