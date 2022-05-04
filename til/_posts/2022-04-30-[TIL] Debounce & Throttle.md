@@ -139,9 +139,13 @@ textarea.addEventListener('keyup', async (e) => {
 const debounce = (fn, delay) => {
   let timer = null;
   return function () {
+    /* 매개 변수가 없는 경우엔 apply 안해도 됨 */
+    const context = this;
+    const args = arguments;
+
     clearTimeout(timer);
 
-    timer = setTimeout(fn, delay);
+    timer = setTimeout(fn.apply(context, args), delay);
   };
 };
 ```
@@ -183,11 +187,13 @@ window.addEventListener("resize", (e) => {
 ```js
 const throttle = (fn, delay) => {
   return function () {
+    const context = this;
+    const args = arguments;
     let timer;
 
     if (!timer) {
       timer = setTimeout(() => {
-        fn();
+        fn.apply(context, args);
         timer = null;
       }, 일정시간);
     }
@@ -238,7 +244,7 @@ const throttle = (fn, delay) => {
 
 낙관적 업데이트는 데이터 입력 후 해당 데이터가 서버에 잘 들어갔는지 확인하지 않고 직접 데이터를 기존 데이터에 추가해주는 기법입니다.
 
-## 예시: 글 자동 저장
+### 예시: 글 자동 저장
 
 만약 글을 자동저장할 때 post 요청 후 get요청으로 값을 받을 때까지 화면 변경이 되지 않는다면 사용자 입장에서 불편할 것입니다. 이때 다음과 같이 post요청 전 입력값을 현재 state에 추가하는 setState함수를 쓰면 낙관적 업데이트를 할 수 있습니다.
 
@@ -255,6 +261,44 @@ timer = setTimeout(
 ```
 
 이경우 get 요청이 실행될 때까지 기다릴 필요가 없고 즉각적으로 변경사항이 반영되기 때문에 사용자 친화적인 사이트를 구현할 수 있습니다.
+
+## 선도적 디바운스
+
+> 첫번째 이벤트에 함수호출 후 setTimeOut()
+
+해당 방법은 처음 이벤트에 함수를 호출하고 그 이후 연속적으로 발생한 이벤트는 무시하는 기법입니다. 마지막 이벤트가 끝나고 일정시간이 지나면 그제서야 다시 함수를 호출하는 상태로 만들기 때문에 디바운스효과를 얻으면서 즉각적인 화면 전환을 만들어 낼 수 있습니다.
+
+leading debounce라는 개념은 존재하나 온라인 상에 예시가 존재하지 않아 제가 직접 구현해봤는데
+
+```js
+export default function leadDebounce(fn, delay) {
+  let timer;
+  let event = false;
+
+  return function () {
+    if (!event) {
+      //처음 이벤트를 줬을 때 바로 함수 호출
+      const context = this;
+      const args = arguments;
+
+      fn.apply(this, arguments);
+      event = true;
+    } else {
+      //처음 이벤트 이후 연속적인 이벤트의 함수호출 무시,
+      //다만 이벤트가 멈췄을 때 일정시간이후 timer를 null로 만들어서 다음 이벤트 시 함수호출 가능
+
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        event = false;
+      }, 300);
+    }
+  };
+}
+```
+
+다음과 같이 첫 이벤트에만 함수를 호출하고 연이은 함수호출은 무시, 마지막 이벤트로부터 일정 시간이 지난 후에 다시 첫 이벤트 함수를 호출하는 것을 볼 수 있습니다.
+
+![image](https://user-images.githubusercontent.com/79133602/166717136-7002ced7-a062-4a5c-8879-2f317c9ace65.png)
 
 <br/><br/><br/>
 
@@ -273,3 +317,5 @@ timer = setTimeout(
 💻 [CodePen_Debounce Resize](https://codepen.io/dcorb/pen/XXPjpd)
 
 💻 [CodePen The Difference Between Throttling, Debouncing, and Neither](https://codepen.io/jaehee/pen/jXrYQz)
+
+💻 [Debouncing and Throttling Explained Through Examples](https://css-tricks.com/debouncing-throttling-explained-examples/)
