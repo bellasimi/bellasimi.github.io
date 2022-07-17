@@ -19,7 +19,7 @@ toc_sticky: true
 
 항상 해당 에러를 만날 때마다 막연히 기존 base가 달라져서 충돌하고 있구나 정도로만 생각했지 빨리 감기를 할 수 없다는 게 무슨 의미인지는 고민하지 않았다. 그래서 오늘 다시 공부해봤다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c51ef3f1-99c2-4147-b5e9-71469e95c7b1/Untitled.png)
+![image](https://user-images.githubusercontent.com/79133602/179405856-02ae7aa3-5752-45fc-895d-cad652eab46c.png)
 
 위 이미지를 보면 feature2의 경우 빨리감기가 가능하다
 
@@ -52,11 +52,10 @@ merge될 branch의 값이 base와 달라져서서 안된다. feature1은 `a-b-c`
 
 github pr의 merge pull request를 보면 다음과 같이 3종류의 merge가 있다.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/696edf0b-e26b-4f6c-aea9-a99006d6209f/Untitled.png)
-
+![image](https://user-images.githubusercontent.com/79133602/179405892-f4bb2f53-2013-441d-bb8d-79424a144aa3.png)
 <br/>
 
-### create a merge commit
+### ✅ create a merge commit
 
 기존에 우리가 하던 일반적인 merge다. 기능 브랜치는 merge하려는 develop에서 따로 확인이 가능하고 커밋 내역도 전부 존재한다.
 
@@ -69,7 +68,7 @@ github pr의 merge pull request를 보면 다음과 같이 3종류의 merge가 �
 
 <br/>
 
-### squash and merge
+### ✅ squash and merge
 
 전체 commit들이 merge commit 하나로 합쳐진 뒤 develop의 base에 붙인다.
 
@@ -81,7 +80,7 @@ github pr의 merge pull request를 보면 다음과 같이 3종류의 merge가 �
 
 <br/>
 
-### rebase and merge
+### ✅ rebase and merge
 
 전체 commit들이 develop 뒤에 바로 이어지고 commit의 번호도 바뀐다.
 
