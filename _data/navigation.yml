@@ -37,16 +37,11 @@ sidebar-list:
         url: /install/
       - title: "Java"
         url: /java/
-      - title: "DB"
-        url: /db/
   - title: "CS"
     url: /cs/
 
   - title: "Blog"
     url: /blog/
-
-  - title: "ETC"
-    url: /etc/
 
   #- title: Project
   #children:
