@@ -19,27 +19,28 @@ main:
 
 # sidebar links
 sidebar-list:
-  - title: "CS"
-    url: /cs/
-
+  - title: "Project"
+    url: /project/
   - title: Programming
     children:
-      - title: "Install"
-        url: /install/
-      - title: "Java"
-        url: /java/
-      - title: "JS"
-        url: /js/
-      - title: "DB"
-        url: /db/
-      - title: "React"
-        url: /react/
       - title: "FrontEnd"
         url: /frontend/
+      - title: "JS"
+        url: /js/
+      - title: "React"
+        url: /react/
       - title: "Error"
         url: /error/
       - title: "Git"
         url: /git/
+      - title: "Install"
+        url: /install/
+      - title: "Java"
+        url: /java/
+      - title: "DB"
+        url: /db/
+  - title: "CS"
+    url: /cs/
 
   - title: "Blog"
     url: /blog/
