@@ -1,9 +1,9 @@
 ---
-title: "[TIL] REST API"
+title: "[CS] REST API"
 categories:
-  - til
+  - cs
 tags:
-  - til
+  - rest
 toc: true
 toc_sticky: true
 ---

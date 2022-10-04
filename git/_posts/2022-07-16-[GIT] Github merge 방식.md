@@ -1,9 +1,8 @@
 ---
-title: "[TIL] Github merge 방식"
+title: "[GIT] Github merge 방식"
 categories:
-  - til
+  - git
 tags:
-  - til
   - github
 toc: true
 toc_sticky: true

@@ -1,12 +1,11 @@
 ---
-title: "[TIL] 자바스크립트 DAY5"
+title: "[ALGORITHM] 그래프, 이진트리"
 categories:
-- til
+  - algorithm
 tags:
-- til
-- day5
-- 그래프
-- 이진트리
+  - algorithm
+  - 그래프
+  - 이진트리
 
 toc: true
 toc_sticky: true
@@ -20,39 +19,36 @@ toc_sticky: true
 
 > 지하철 노선도, 인물 관계도
 
-여러 개의 간선 가질 수 있다. 노드 뒤에 노드가 여러개 나올 수 있다. 간선은 가중치를 가질 수 있다. 
+여러 개의 간선 가질 수 있다. 노드 뒤에 노드가 여러개 나올 수 있다. 간선은 가중치를 가질 수 있다.
 
 방향, 무방향 둘 다 존재
-
 
 <br/>
 
 # 연결 그래프
 
-## 자바스트립트 구현 방법 
+## 자바스트립트 구현 방법
 
 ![image](https://user-images.githubusercontent.com/79133602/160165799-d48a7f7e-46c9-4f81-b34b-29712fb1bf19.png)
 
 이런 그래프를 자바스크립트 코드로 구현하려면 어떻게 해야 할까?
 
-
-### 1-1. 인접행렬로 구현: 2차원 배열 
+### 1-1. 인접행렬로 구현: 2차원 배열
 
 ```
 const graph = Array.from(Array(5), () => Array(5).fill(false));
 
 graph[0][1] = true; // 0 -> 1
-graph[4][0] = true; //4 -> 
+graph[4][0] = true; //4 ->
 .
 .
 ```
- 
+
 이런식으로 행엔 원점 src => 열엔 도착점 dest을 넣고 해당 2차원 배열의 값을 true 즉 1로 준다.
 
-그러면 다음과 같이 출력된다. 
+그러면 다음과 같이 출력된다.
 
 ![image](https://user-images.githubusercontent.com/79133602/160166140-a2aa95d4-857d-4d19-a547-20c73383a2dc.png)
-
 
 true값이 있는 지점은 간선이 연결된 곳이고 만약 가중치를 주고 싶다면 false, true 대신 null과 가중값을 넣어주면 됨!
 
@@ -73,12 +69,11 @@ graph[2].push(0);// 2 -> 0
 
 ```
 
-연결리스트의 경우 배열의 인덱스가 노드가 되고 해당 인덱스의 값엔 간선으로 이어진 노드들이 배열로 들어 간다. 
+연결리스트의 경우 배열의 인덱스가 노드가 되고 해당 인덱스의 값엔 간선으로 이어진 노드들이 배열로 들어 간다.
 
 즉, 데이터가 인덱스 포인터가 해당 인덱스의 값 배열이다.
 
 ![image](https://user-images.githubusercontent.com/79133602/160168528-d8f06e6f-81da-4d03-b85f-3789990fdaa1.png)
-
 
 <br/><br/>
 
@@ -97,56 +92,51 @@ graph2.fill(0)
 
 # 트리
 
-> 조직도, 디렉토리 
+> 조직도, 디렉토리
 
 ![image](https://user-images.githubusercontent.com/79133602/160230695-62870577-984f-413b-863c-3f0d7dcd79ac.png)
 
-
-방향 그래프의 일종, 정점을 가리키는 간선이 하나 밖에 없다. 
+방향 그래프의 일종, 정점을 가리키는 간선이 하나 밖에 없다.
 
 루트 정점을 제외한 모든 정점은 반드시 하나의 부모 정점을 가져 (부모-자식 관계 o)
 
-정점이  n개 라면 반드시 n-1개의 간선을 가져( n개의 정점 노드 중 루트를 제외하곤 간선으로 내려옴 )
+정점이 n개 라면 반드시 n-1개의 간선을 가져( n개의 정점 노드 중 루트를 제외하곤 간선으로 내려옴 )
 
-루트에서 특정 정점으로 가는 경로는 유일 ( 방향성 :  노드 간에 1개의 간선으로 이어짐)
+루트에서 특정 정점으로 가는 경로는 유일 ( 방향성 : 노드 간에 1개의 간선으로 이어짐)
 
 <br/><br/>
 
-#  이진 트리 
+# 이진 트리
 
-> 자식이 최대 2개 
+> 자식이 최대 2개
 
 ![image](https://user-images.githubusercontent.com/79133602/160230933-fbcf9990-097c-499d-84ff-15470506a8c0.png)
-
 
 탐색을 위한 알고리즘
 
 <br/>
 
-## 특징 
+## 특징
 
-- 정점이 n개인 이진트리 최악의 경우 높이가 n => 편향트리 
+- 정점이 n개인 이진트리 최악의 경우 높이가 n => 편향트리
 
-- 정점이 n개인 포화, 완전 이진 트리의 높이  == log N
+- 정점이 n개인 포화, 완전 이진 트리의 높이 == log N
 
-- 높이가 h인 포화 이진 트리는 2^h -1개 정점을 가짐 
+- 높이가 h인 포화 이진 트리는 2^h -1개 정점을 가짐
 
 - 사용되는 경우: 이진 탐색트리, 힙, AVL 트리, 레드 블랙 트리
-
 
 <br/>
 
 ## 구현 방법
 
-그래프와 마찬가지로 인접행렬, 인접리스트 방식으로 구현할 수도 있는데 이진 트리의 경우 자식이 2개라는 
-조건이 있어서 다음과 같이 연결 리스트로 구하면 편하다. 
+그래프와 마찬가지로 인접행렬, 인접리스트 방식으로 구현할 수도 있는데 이진 트리의 경우 자식이 2개라는
+조건이 있어서 다음과 같이 연결 리스트로 구하면 편하다.
 <br/>
-
 
 ### 이진트리로 구현 : 연결리스트
 
 ![image](https://user-images.githubusercontent.com/79133602/160233830-28e06ed6-899c-4039-95d5-3753c7d61b9c.png)
-
 
 ```
 const input = [[9,3],[9,8],[8,7],[3,2],[3,5],[5,4]]
@@ -172,12 +162,12 @@ const tree = [
     3,8,
     // 2*2, 2*2+1, 3*2,3*2+1
     2,5 ,undefined,7
-    // 4*2, 4*2+1  ,5*2, 5*2+1 
+    // 4*2, 4*2+1  ,5*2, 5*2+1
     undefined,undefined,undefined, 4
 ]
 
 
-// 연결리스트 : 링크가 두개 
+// 연결리스트 : 링크가 두개
 class Node {
     constructor(data){
         this.data = data;
@@ -197,7 +187,7 @@ class Queue {
     enqueue(node){
         this.queue[rear++].push(node);
     }
-    
+
     dequeue(){
         const val = this.queue[this.front];
         delete this.queue[this.front];
@@ -217,7 +207,7 @@ class Queue {
 
 //트리 구조
 class Tree {
-    constructor(node){        
+    constructor(node){
         this.root = node;
     }
 
@@ -249,17 +239,15 @@ console.log(tree);
 <br/>
 
 ```
+
 # 느낀점
 
 트리가 그래프의 부분 집합이라고 생각했는데, 그래프는 부모-자식관계가 없다는 점에서 다르다. 트리가 그래프와 유사한 점이 많기에 헷갈릴 수 있으니 조심해야 겠다.
 
-트리를 만들 때 가급적 클래스를 사용하고, 지금은 직접 초기화를 했는데, 나중엔 트리의 해당 자식이 있는지 확인 후 노드를 넣어주는 insert함수를 만들어 사용해야 겠다. 
-
-
+트리를 만들 때 가급적 클래스를 사용하고, 지금은 직접 초기화를 했는데, 나중엔 트리의 해당 자식이 있는지 확인 후 노드를 넣어주는 insert함수를 만들어 사용해야 겠다.
 
 <br/><br/><br/><br/>
 
 # 참고
 
-💻 [프로그래머스 스쿨 DAY5 강의](https://programmers.co.kr/?utm_source=google&utm_medium=cpc&utm_campaign=brand_prgms_pc&gclid=CjwKCAjwuYWSBhByEiwAKd_n_u7a0X7xZqts4x1EH2x0MWOGqVMQiyD5AgCVZxAv_P9fLGAjQLhaExoCl8IQAvD_BwE)
-
+💻 [프로그래머스 스쿨](https://programmers.co.kr/?utm_source=google&utm_medium=cpc&utm_campaign=brand_prgms_pc&gclid=CjwKCAjwuYWSBhByEiwAKd_n_u7a0X7xZqts4x1EH2x0MWOGqVMQiyD5AgCVZxAv_P9fLGAjQLhaExoCl8IQAvD_BwE)

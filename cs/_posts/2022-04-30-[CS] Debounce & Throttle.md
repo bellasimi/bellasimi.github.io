@@ -1,9 +1,8 @@
 ---
-title: "[TIL] Debounce와 Throttle"
+title: "[CS] Debounce와 Throttle"
 categories:
-  - til
+  - cs
 tags:
-  - til
   - Debounce
   - Throttle
 toc: true

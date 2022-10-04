@@ -17,11 +17,10 @@ main:
   # - title: "Sample Collections"
   #   url: /collection-archive/
 
-
 # sidebar links
 sidebar-list:
-  - title: "TIL"
-    url: /til/
+  - title: "CS"
+    url: /cs/
 
   - title: Programming
     children:
@@ -48,16 +47,15 @@ sidebar-list:
   - title: "ETC"
     url: /etc/
 
-
   #- title: Project
-    #children:
-      #- title: "shoppingMall"
-        #url: https://bellasimi.github.io/shoppingMall/
-      #- title: "Working with Pages"
-        #url: /docs/pages/
-      #- title: "Working with Collections"
-        #url: /docs/collections/
-      #- title: "Helpers"
-        #url: /docs/helpers/
-      #- title: "Utility Classes"
-        #url: /docs/utility-classes/
+  #children:
+  #- title: "shoppingMall"
+  #url: https://bellasimi.github.io/shoppingMall/
+  #- title: "Working with Pages"
+  #url: /docs/pages/
+  #- title: "Working with Collections"
+  #url: /docs/collections/
+  #- title: "Helpers"
+  #url: /docs/helpers/
+  #- title: "Utility Classes"
+  #url: /docs/utility-classes/

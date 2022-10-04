@@ -1,9 +1,8 @@
 ---
-title: "[TIL] React 스타일"
+title: "[REACT] React 스타일"
 categories:
-  - til
+  - react
 tags:
-  - til
   - react
 toc: true
 toc_sticky: true

@@ -1,9 +1,8 @@
 ---
-title: "[TIL] 알고리즘) 괄호회전하기"
+title: "[ALGORITHM] 괄호회전하기"
 categories:
-  - til
+  - algorithm
 tags:
-  - til
   - algorithm
 toc: true
 toc_sticky: true

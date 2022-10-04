@@ -1,22 +1,20 @@
 ---
-title: "[TIL] 자바스크립트 DAY3"
+title: "[ALGORITHM] 자바스크립로 연결리스트 구현하기"
 categories:
-- til
+  - algorithm
 tags:
-- til
-- day3
+  - js
+  - 연결리스트
 toc: true
 toc_sticky: true
-
 ---
 
 ![js](https://user-images.githubusercontent.com/79133602/159547044-d4425e2f-1a97-487f-9855-cceb721f6bce.png)
 
-
 <br/>
 <br/>
 
-# 자료 구조 
+# 자료 구조
 
 > 큐, 스택, 트리,그래프
 
@@ -24,16 +22,13 @@ toc_sticky: true
 
 ![image](https://user-images.githubusercontent.com/79133602/160538522-10fa0006-31a0-4395-b59a-a6e2ffac33df.png)
 
-
-**자료구조 활용 예 )** 
+**자료구조 활용 예 )**
 
 - 검색, 자동완성 : TREE
 
 - 줄서기 :QUEUE
 
 - 좌석선택 테이블 : HASH TABLE
-
-
 
 <br/>
 
@@ -49,15 +44,14 @@ toc_sticky: true
 
 > 인덱스에 값을 저장
 
-추가, 삭제가 많으면 적합하지 않아.. 인덱스를 옮기는 게 비효율 적이야... 
+추가, 삭제가 많으면 적합하지 않아.. 인덱스를 옮기는 게 비효율 적이야...
 선형 시간이 소요된다구 😰
 
-인덱스를  아는 경우: 검색에 유리! 
+인덱스를 아는 경우: 검색에 유리!
 
 모르는 경우: 배열을 전부 순회;;
 
 <br/>
-
 
 ## 자바스크립트 배열 특이점
 
@@ -67,10 +61,11 @@ toc_sticky: true
 const arr = [1,2];
 arr.push(3); // 동적으로 값 추가
 arr.pop(); //삭제
-arr['name'] = 'shin' //HashMap 처럼 사용 가능 but 길이엔 영향 x 
+arr['name'] = 'shin' //HashMap 처럼 사용 가능 but 길이엔 영향 x
 console.log(arr);
 
 ```
+
 자바스크립트의 배열이 근본적으로 객체 타입이기 때문에 이런 특이점이 있다. 인덱스에 숫자 말고 다른 자료형을 넣으면 배열의 길이에 계산되지 않는다.
 
 <br/>
@@ -81,16 +76,15 @@ console.log(arr);
 
 <br/><br/><br/>
 
-# 2.  연결 리스트
+# 2. 연결 리스트
 
->  **데이터** + <span style="color:red">포인터</span> == **노드** 
+> **데이터** + <span style="color:red">포인터</span> == **노드**
 
 각 요소(노드)를 포인터로 연결관리,
 데이터 영역엔 값 + 포인터 영역엔 다음 노드가 들어 있음
 
 추가, 삭제가 반복되면 얘가 좋지. 상수시간만 소요된다구 !
 탐색은 선형시간
-
 
 <br/><br/>
 
@@ -112,8 +106,6 @@ console.log(arr);
 
 ![image](https://user-images.githubusercontent.com/79133602/159930492-d4e3aa46-1e95-430e-8824-0b6ac1593055.png)
 
-
-
 시작과 끝이 있어 Tail의 포인터는 null/ 이후 노드만을 포인터에 저장
 
 - 값을 찾을 때: 포인터를 순회하며 해당 노드가 원하는 값인지 찾기(선형시간-데이터 개수만큼)
@@ -121,10 +113,9 @@ console.log(arr);
 
 <br/>
 
-## 2-2. Doubly LInked List 
+## 2-2. Doubly LInked List
 
 > 포인터가 이전, 이후 따로
-
 
 ![image](https://user-images.githubusercontent.com/79133602/159933151-dfdb1317-b230-4693-8c20-33711f5ccb0f.png)
 
@@ -132,27 +123,25 @@ console.log(arr);
 
 <br/>
 
-## 2.3 Circular LInked LIst 
+## 2.3 Circular LInked LIst
 
 > Tail이 Head로 연결됨
 
 ![image](https://user-images.githubusercontent.com/79133602/159933623-5e273767-1685-4bb9-a00b-22d60402331b.png)
 
-
 <br/><br/><br/>
 
-# 3. 스택 
+# 3. 스택
 
 > 선입 후출
 
 ![image](https://user-images.githubusercontent.com/79133602/159934136-94016edb-21fa-4b31-841b-f14e83343295.png)
 
-ex. 스택 메모리 
+ex. 스택 메모리
 
 자바스크립에서 구현하는 법 배열, 연결리스트 사용. 배열에 이미 pop,push가 있어서 배열로 사용하기가 편함
 
 [스택에 관해서 참조](https://bellasimi.github.io/java/Java-Stack/)
-
 
 <br/>
 <br/><br/>
@@ -160,7 +149,6 @@ ex. 스택 메모리
 # 😎 번외 : Linked List 구현
 
 > Singly Linked List
-
 
 ```
 class Node {
@@ -189,7 +177,7 @@ class SinglyLinkedList {
   }
 
   find(val){
-    let currNode = this.head; 
+    let currNode = this.head;
     while(currNode.data != val ){
        currNode = currNode.pointer;
     }
@@ -200,32 +188,32 @@ class SinglyLinkedList {
     const newNode = new Node(newVal);
     //마지막 노드인지? node new Node로 수정 전 미리 묻기
     const boolean = node === this.tail;
-    
+
     newNode.pointer = node.pointer;
     node.pointer = newNode;
-    
+
     if(boolean){// 마지막 노드에도 insert 가능
        this.tail = newNode;
     }
-    
+
    }
-  
+
   remove(val){
      let preNode = this.head;
     const end = this.tail;
     while(preNode.pointer.data !== val){
-       preNode = preNode.pointer; 
+       preNode = preNode.pointer;
     }
     console.log(preNode)
-    
+
     if(preNode.pointer !== end){
 		//!==null이면 Tail 삭제가 안됨
        preNode.pointer = preNode.pointer.pointer;
     }else{//Tail의 값 삭제
-       this.tail = preNode; 
+       this.tail = preNode;
     }
   }
-  
+
   display(){
      let currNode = this.head;
     const end = this.tail;
@@ -235,11 +223,11 @@ class SinglyLinkedList {
       currNode = currNode.pointer;
     } //마지막 값 전에 끝나서
     arrStr+=end.data+' ]'; //마지막값 따로 추가 후 ]를 붙임
-    
+
     console.log(arrStr)
-  
+
   }
-  
+
   size(){
      let currNode = this.head;
     const end = this.tail;
@@ -249,7 +237,7 @@ class SinglyLinkedList {
       currNode = currNode.pointer;
     }
     return cnt;
-  
+
   }
 
 
@@ -276,7 +264,7 @@ console.log(list.size());//2
 
 코딩 테스트를 풀 때 자바스크립트의 경우 객체형으로 문제를 풀이 한 적이 없다. 자바는 자료 구조들을 라이브러리로 가져다 쓸 수 있지만 , 자바스크립트는 그렇지 않기 때문이다.
 
-그래서 직접 객체를 구현할 일도 없었다. 
+그래서 직접 객체를 구현할 일도 없었다.
 
 라이브러리를 가져다 쓸 땐 내가 개념을 다 이해했다고 생각했는데 아니었다. 직접 구현해 보니 어떤 식으로 알고리즘을 구현하는지 구체적으로 알지 못 했다.
 
@@ -296,11 +284,10 @@ console.log(list.size());//2
 
 항상 개념은 알고 활용은 잘 못 하는 경우가 많았는데, 내가 제대로 알고리즘을 이해하지 못했기 때문인 것 같다. 앞으론 직접 객체를 구현하고 문제 풀이에 써봐야 겠다
 
-
 <br/><br/><br/><br/>
 
 # 참고
 
-💻 프로그래머스 데브코스 Day3 강의
+💻 프로그래머스 데브코스
 
 💻 [MDN WEB DOCS: 자바스크립트 자료구조](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)

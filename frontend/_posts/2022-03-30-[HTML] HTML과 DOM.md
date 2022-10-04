@@ -1,18 +1,15 @@
 ---
-title: "[TIL] 자바스크립트 DAY8"
+title: "[HTML] HTML과 DOM"
 categories:
-- til
+  - html
 tags:
-- til
-- day8
-- HTML
-- DOM
+  - html
+  - DOM
 toc: true
 toc_sticky: true
 ---
 
 ![image](https://user-images.githubusercontent.com/79133602/161557696-fe3b688d-f6d2-4073-a18f-8d57377acaa7.png)
-
 
 <br/>
 
@@ -20,9 +17,9 @@ toc_sticky: true
 
 > Hyper Text Markup Langage
 
-구조 + 의미 
+구조 + 의미
 
-Mark up  문서 수정 방식 
+Mark up 문서 수정 방식
 
 웹문서 , 스타일 지정 하이퍼링크로 연결됨 html은 프로그래밍 언어라 부르기 어렵 계산이 없자냐
 그냥 워드 문서와 비슷
@@ -33,25 +30,21 @@ Mark up  문서 수정 방식
 
 초창기 브라우저 : html 만으로 제작
 
-
 수정사항 발생시 일일이 파일 수정하지 않고 css 등 기능에 따라 파일을 분리 후 다른 곳에서 가져다 쓰게 함
 
 재사용성 증가
 
-
 <br/><br/>
 
-
-
 # CSS
- 
+
 > HTML 문서를 표현하는 STYLE
 
 브라우저 마다 CSS 기본 달리 표현 , NOMALIZE CSS 사용하면 통일 가능
 
 <br/>
 
-## CSS3 
+## CSS3
 
 ```
 selector {
@@ -65,7 +58,7 @@ selector {
 
 2. 해당 html 파일 헤드 태그 안에 스타일 태그 만들고 css 지정
 
-3.  각각의 요소마다 직접 스타일 지정
+3. 각각의 요소마다 직접 스타일 지정
 
 <br/>
 
@@ -73,18 +66,15 @@ selector {
 
 <br/><br/>
 
-
-
 # DOM
 
 > Document Object Model
 
 ![image](https://user-images.githubusercontent.com/79133602/160793522-6b76b4c1-e9d4-4255-9f5d-0aa540f9aefd.png)
 
-
 추상적인 개념의 객체를 물리적으로 표현 => HTML 문서 직접 수정
 
-HTML을 읽어서 파싱 -> 트리구조로 노드를 계층으로 분리 
+HTML을 읽어서 파싱 -> 트리구조로 노드를 계층으로 분리
 
 순회는 전위순회로 이뤄짐
 
@@ -100,7 +90,6 @@ HTML을 읽어서 파싱 -> 트리구조로 노드를 계층으로 분리
 
 3. Render Tree 생성: 1,2 과정을 합쳐서 돔 노드의 위치를 정해주고 화면을 출력
 
-
 <br/><br/>
 
 ## DOM 선택
@@ -108,7 +97,7 @@ HTML을 읽어서 파싱 -> 트리구조로 노드를 계층으로 분리
 > id는 유일, class는 여러개
 
 ```
-document.getElementById('아이디명') 
+document.getElementById('아이디명')
 ```
 
 만약 id를 실수로 똑같이 주면 제일 먼저 찾은 요소 하나만 반환
@@ -119,35 +108,36 @@ document.getElementsByClassName('클래스명')
 
 일치하는 모든 요소 반환
 
-> ('li'), span, nav... 
+> ('li'), span, nav...
 
 ```
 document.getElementsByTagName('태그명')
 ```
+
 일치하는 모든 요소 반환 li 태그들 전부...
 
 > ('.클래스명'), ('#아이디명')
+
 ```
 document.querySelector('쿼리문')
 ```
-
-
 
 일치하는 제일 첫번째 요소만 반환
 
 > ('.클래스명')
+
 ```
 document.querySelector('쿼리문')
 ```
 
-일치하는 클래스 요소 전부 반환 -> for문으로 각각 조작 
-
+일치하는 클래스 요소 전부 반환 -> for문으로 각각 조작
 
 > window.id명
 
 ```
  window[id] : id를 넣어준 태그 모두 반환
 ```
+
 <br/>
 
 ## DOM 접근
@@ -160,7 +150,7 @@ document.querySelector('쿼리문')
 
 <br/>
 
-✔ **선택노드.classList** 
+✔ **선택노드.classList**
 
 ✔ **선택노드.hasAttribute('style...등등 속성명')**
 
@@ -182,7 +172,7 @@ document.querySelector('쿼리문')
 <선택된 태그> 원하는 글 내용 </선택된 태그>
 ```
 
-해당 태그의 글을 바꿀 수 있음 
+해당 태그의 글을 바꿀 수 있음
 
 <br/>
 
@@ -208,7 +198,7 @@ HTML을 직접 수정 XSS 위험이 있어 지양
 newDome.textContent ='제목1'
 ```
 
-해당 태그로 노드를 생성한다. 
+해당 태그로 노드를 생성한다.
 
 <br/>
 
@@ -248,15 +238,13 @@ newDome.textContent ='제목1'
 
 선택노드의 이전 형제 노드를 가져옴. 없으면 null
 
-
-
 <br/><br/><br/>
 
-# Virtual DOM 
+# Virtual DOM
 
 > 실제 돔트리 객체로 만들어 객체를 수정
 
-돔을 수정할 때마다 재렌더링이 일어나, 자원소모가 심해... 만약 돔을 수정하고 싶은데 랜더링 덜 하려면? 
+돔을 수정할 때마다 재렌더링이 일어나, 자원소모가 심해... 만약 돔을 수정하고 싶은데 랜더링 덜 하려면?
 
 가상돔 사용 : 리액트, 뷰
 
@@ -266,19 +254,10 @@ newDome.textContent ='제목1'
 
 렌더링을 덜 한다고 항상 더 빠른거 아냐. 그리고 돔, 가상돔 둘다 탐색하고 수정하기에 더 비효율 적일 수도 있어!
 
-
-
-
-
-
 <br/><br/>
 
 <br/><br/>
 
+# 참조
 
-
-
-# 참조 
-
-
-💻 [프로그래머스 스쿨 데브코스 DAY8](https://school.programmers.co.kr/tryouts/38311/challenges)
+💻 [프로그래머스 스쿨 데브코스](https://school.programmers.co.kr/tryouts/38311/challenges)
