@@ -14,7 +14,7 @@ toc_sticky: true
 
 Atom으로 사용자 정보를 관리하는데 따로 값을 저장하지 않기에 새로고침 시 값이 날라가는 문제가 있었습니다.
 
-![video](https://user-images.githubusercontent.com/79133602/199007974-2ff26ba5-db5b-4983-90c2-dcd3b957c298.mp4)
+<video src="https://user-images.githubusercontent.com/79133602/199007974-2ff26ba5-db5b-4983-90c2-dcd3b957c298.mp4"/>
 
 <br/>
 
@@ -82,4 +82,4 @@ export const currentUser = atom<User>({
 
 ## 참고
 
-[Recoil로 전역 상태 관리하기](https://velog.io/@chchaeun/Recoil%EB%A1%9C-%EC%A0%84%EC%97%AD-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
+💻 [Recoil로 전역 상태 관리하기](https://velog.io/@chchaeun/Recoil%EB%A1%9C-%EC%A0%84%EC%97%AD-%EC%83%81%ED%83%9C-%EA%B4%80%EB%A6%AC%ED%95%98%EA%B8%B0)
