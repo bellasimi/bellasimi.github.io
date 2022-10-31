@@ -14,8 +14,6 @@ toc_sticky: true
 
 Atom으로 사용자 정보를 관리하는데 따로 값을 저장하지 않기에 새로고침 시 값이 날라가는 문제가 있었습니다.
 
-<video src="https://user-images.githubusercontent.com/79133602/199007974-2ff26ba5-db5b-4983-90c2-dcd3b957c298.mp4"/>
-
 <br/>
 
 ## 고민
