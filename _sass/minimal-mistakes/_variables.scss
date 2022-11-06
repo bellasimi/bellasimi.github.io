@@ -6,13 +6,12 @@
    Typography
    ========================================================================== */
 @font-face {
-  font-family: "EliceDigitalBaeum-Bd";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
-    format("woff2");
-  font-weight: normal;
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
   font-style: normal;
 }
-
 $doc-font-size: 16 !default;
 
 /* paragraph indention */
@@ -24,11 +23,14 @@ $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
-$elice-digital: EliceDigitalBaeum-Bd;
+$pretendard: Pretendard-Regular;
 
 /* sans serif typefaces */
-$sans-serif-narrow: $sans-serif !default;
-$helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default;
+/* $sans-serif-narrow: $sans-serif !default;
+$helvetica: Helvetica, "Helvetica Neue", Arial, sans-serif !default; */
+
+$sans-serif-narrow: $pretendard !default;
+$helvetica: pretendard, Helvetica, "Helvetica Neue", Arial, sans-serif !default;
 
 /* serif typefaces */
 $georgia: Georgia, serif !default;
@@ -41,9 +43,9 @@ $global-font-family: $sans-serif !default;
 $header-font-family: $sans-serif !default;
 $caption-font-family: $serif !default; */
 
-$global-font-family: $elice-digital !default;
-$header-font-family: $elice-digital !default;
-$caption-font-family: $elice-digital !default;
+$global-font-family: $pretendard !default;
+$header-font-family: $pretendard !default;
+$caption-font-family: $pretendard !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px

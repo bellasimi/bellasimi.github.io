@@ -3,7 +3,11 @@
    ========================================================================== */
 
 .masthead {
-  position: relative;
+  position: sticky;
+  font-size: 20px;
+  font-weight: 700;
+  top: 0;
+  background-color: white;
   border-bottom: 1px solid $border-color;
   -webkit-animation: $intro-transition;
   animation: $intro-transition;
@@ -66,8 +70,6 @@
   clear: both;
 
   .site-nav {
-    font-size: 20px;
-    font-weight: 700;
     margin-left: 0;
 
     @include breakpoint($small) {
