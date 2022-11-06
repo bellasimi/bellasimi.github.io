@@ -66,6 +66,8 @@
   clear: both;
 
   .site-nav {
+    font-size: 20px;
+    font-weight: 700;
     margin-left: 0;
 
     @include breakpoint($small) {

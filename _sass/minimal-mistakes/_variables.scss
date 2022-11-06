@@ -5,6 +5,13 @@
 /*
    Typography
    ========================================================================== */
+@font-face {
+  font-family: "EliceDigitalBaeum-Bd";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_elice@1.0/EliceDigitalBaeum-Bd.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
 
 $doc-font-size: 16 !default;
 
@@ -17,6 +24,7 @@ $serif: Georgia, Times, serif !default;
 $sans-serif: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI",
   "Helvetica Neue", "Lucida Grande", Arial, sans-serif !default;
 $monospace: Monaco, Consolas, "Lucida Console", monospace !default;
+$elice-digital: EliceDigitalBaeum-Bd;
 
 /* sans serif typefaces */
 $sans-serif-narrow: $sans-serif !default;
@@ -28,10 +36,14 @@ $times: Times, serif !default;
 $bodoni: "Bodoni MT", serif !default;
 $calisto: "Calisto MT", serif !default;
 $garamond: Garamond, serif !default;
-
+/*
 $global-font-family: $sans-serif !default;
 $header-font-family: $sans-serif !default;
-$caption-font-family: $serif !default;
+$caption-font-family: $serif !default; */
+
+$global-font-family: $elice-digital !default;
+$header-font-family: $elice-digital !default;
+$caption-font-family: $elice-digital !default;
 
 /* type scale */
 $type-size-1: 2.441em !default; // ~39.056px
