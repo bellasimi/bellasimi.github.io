@@ -1,5 +1,5 @@
 ---
-title: "SWR intersectionObserver로 무한스크롤 구현"
+title: "SWR, intersectionObserver로 무한스크롤 구현"
 categories:
   - intersectionObserver
   - SWR
