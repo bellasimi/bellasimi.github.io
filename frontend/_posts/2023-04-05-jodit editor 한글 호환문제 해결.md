@@ -8,7 +8,7 @@ toc_sticky: true
 
 ### 문제 상황
 
-jodit-editor로 이미지 업로드 요청 후 결과가 201임에도 화면에 업로드한 이미지를 표시하지 못 하는 에러가 종종 발생했습니다. 문제의 jodit-editor 코드는 다음과 같습니다.
+jodit-editor로 이미지 업로드 **요청 후 결과가 201** 임에도 화면에 업로드한 **이미지를 표시하지 못 하는 에러가 종종 발생**했습니다. 문제의 jodit-editor 코드는 다음과 같습니다.
 
 ```jsx
 import JoditEditor from "jodit-react";
@@ -99,7 +99,7 @@ const Editor = ({ onChange, initialValue }: Props) => {
 export default Editor;
 ```
 
-보시면, 요청 성공시 defaultHandlerSuccess 메서드를 실행하고, response로 받아온 값을 에디터에 표시하도록 하고 있습니다.
+보시면, 요청 성공시 `defaultHandlerSuccess` 메서드를 실행하고, **response로 받아온 값을 에디터에 표시**하도록 하고 있습니다.
 
 ```js
  defaultHandlerSuccess: function (this: any, resp: any) {
@@ -139,13 +139,13 @@ export default Editor;
 
 ### 원인
 
-jodit-editor가 한글 파일명의 경우 문자로 인식을 못하고 공백 또는 이상한 문자로 치환하기에 발생한 오류였습니다. 서버에선 치환된 문자를 처리하지 못 하기에 영어파일명일 때와 달리 저장을 제대로 할 수 없었던거죠.
+jodit-editor가 **한글 파일명**의 경우 문자로 **인식을 못하고 공백 또는 이상한 문자로 치환하기에 발생**한 오류였습니다. 서버에선 치환된 문자를 처리하지 못 하기에 영어파일명일 때와 달리 저장을 제대로 할 수 없었던거죠.
 
 <br/>
 
 ### 해결
 
-한국어 파일명을 이상하게 치환해서 서버에 보내는게 원인이기 때문에, 다음과 같이 인코딩된 파일명으로 서버에 넘겨주도록 처리했습니다. 그러면 서버에선 디코딩 후 정상적인 한국파일명을 사용할 수 있기에 이미지 업로드를 제대로 할 수 있습니다.
+한국어 파일명을 이상하게 치환해서 서버에 보내는게 원인이기 때문에, 다음과 같이 **인코딩된 파일명으로 서버에 넘겨**주도록 처리했습니다. 그러면 **서버에선 디코딩 후 정상적인 한국파일명을 사용**할 수 있기에 이미지 업로드를 제대로 할 수 있습니다.
 
 **파일명을 커스터마이징 할 수 있는 메서드 `processFileName`를 `config.uploader`에 추가**
 
@@ -159,6 +159,6 @@ processFileName: (key: string, file: File, name: string) => {
 
 ### 참고
 
-[IUploaderOptions | Jodit Editor - v4.0.0-beta.84](https://xdsoft.net/jodit/docs/interfaces/types.IUploaderOptions-1.html)
+[IUploaderOptions Jodit Editor - v4.0.0-beta.84](https://xdsoft.net/jodit/docs/interfaces/types.IUploaderOptions-1.html)
 
 [encodeURIComponent, encodeURI, escape 차이점은 뭘까??](https://youngram2.tistory.com/53)
