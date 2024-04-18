@@ -7,10 +7,12 @@ toc: true
 toc_sticky: true
 ---
 
-### lighthouse로 성능 측정
+### Google Lighthouse로 성능 측정
 
 여러 페이지를 가지고 성능 검사를 해본 결과, 공통적으로 LCP가 크고, 화면 로딩에 오랜 시간이 소요되는 문제가 있었습니다.
 ![image](https://github.com/bellasimi/bellasimi/assets/79133602/9d4d2d63-46e0-43d2-9662-705c65599f52)
+
+<br/>
 
 ### LCP란
 
@@ -19,6 +21,8 @@ toc_sticky: true
 ![image](https://github.com/bellasimi/bellasimi/assets/79133602/769ae85f-a6de-4cc1-8855-883586fa9522)
 
 ![image](https://github.com/bellasimi/bellasimi/assets/79133602/e5c1512f-4619-4614-8dc6-abc7deb25d58)
+
+<br/>
 
 ### LCP가 나쁜 원인
 
@@ -33,6 +37,8 @@ toc_sticky: true
 로드된 모듈을 확인해보니, 리액트 아이콘 전체를 가져오고 있었습니다.
 
 ![image](https://github.com/bellasimi/bellasimi/assets/79133602/bb0ca7e5-b03f-42fc-b98b-786e58c92ca6)
+
+<br/>
 
 ### 해결 방법
 
@@ -53,6 +59,8 @@ toc_sticky: true
    ```jsx
    import { IoClose } from "@react-icons/all-files/io5/IoClose";
    ```
+
+<br/>
 
 ### 결과
 
